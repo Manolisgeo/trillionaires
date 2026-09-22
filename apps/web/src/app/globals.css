@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --color-ink: #111110;
+  --color-paper: #f7f6f3;
+  --color-muted: #6f6d66;
+  --color-line: #e8e6e1;
+  --color-accent: #1c4d3a;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-feature-settings: "ss01" on, "cv11" on;
+}
+
+body {
+  letter-spacing: -0.011em;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+::selection {
+  background: #d8efe4;
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.live-dot {
+  animation: pulse-live 1.6s ease-in-out infinite;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --color-ink: #111110;
+  --color-paper: #f7f6f3;
+  --color-muted: #6f6d66;
+  --color-line: #e8e6e1;
+  --color-accent: #1c4d3a;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-feature-settings: "ss01" on, "cv11" on;
+}
+
+body {
+  letter-spacing: -0.011em;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+::selection {
+  background: #d8efe4;
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.live-dot {
+  animation: pulse-live 1.6s ease-in-out infinite;
+}
+
+.caption-interim {
+  opacity: 0.55;
+}
+
+@media print {
+  html,
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

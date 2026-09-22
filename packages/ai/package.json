@@ -1,0 +1,20 @@
+{
+  "name": "@aperture/ai",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aperture/types": "workspace:*",
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

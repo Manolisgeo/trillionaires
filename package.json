@@ -1,0 +1,24 @@
+{
+  "name": "aperture",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:agent": "pnpm --filter agent dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "test": "turbo test",
+    "db:generate": "pnpm --filter @aperture/database generate",
+    "db:migrate": "pnpm --filter @aperture/database migrate",
+    "db:push": "pnpm --filter @aperture/database push",
+    "db:seed": "pnpm --filter @aperture/database seed",
+    "infra:up": "docker compose -f infrastructure/docker-compose.yml up -d",
+    "infra:down": "docker compose -f infrastructure/docker-compose.yml down"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3"
+  }
+}

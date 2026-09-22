@@ -1,0 +1,32 @@
+{
+  "name": "@aperture/database",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "generate": "prisma generate",
+    "migrate": "sh scripts/with-root-env.sh prisma migrate dev",
+    "push": "sh scripts/with-root-env.sh prisma db push",
+    "seed": "sh scripts/with-root-env.sh tsx src/seed.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aperture/intelligence": "workspace:*",
+    "@prisma/client": "^6.8.2"
+  },
+  "devDependencies": {
+    "prisma": "^6.8.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "bcryptjs": "^3.0.2",
+    "@types/bcryptjs": "^2.4.6"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma",
+    "seed": "tsx src/seed.ts"
+  }
+}

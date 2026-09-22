@@ -1,0 +1,11 @@
+{
+  "name": "agent",
+  "private": true,
+  "scripts": {
+    "dev": "uv run python src/agent.py dev",
+    "start": "uv run python src/agent.py start",
+    "typecheck": "echo 'python agent'",
+    "lint": "echo 'python agent'",
+    "test": "echo 'python agent'"
+  }
+}

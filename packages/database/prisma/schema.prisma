@@ -1,0 +1,714 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ConversationType {
+  INTERVIEW
+  SALES
+  RESEARCH
+  MEETING
+  EXPERT_INTERVIEW
+  CUSTOM
+}
+
+enum ConversationStatus {
+  DRAFT
+  SCHEDULED
+  LIVE
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+enum ProcessingStatus {
+  NOT_STARTED
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+enum ParticipantRole {
+  HOST
+  PARTICIPANT
+  AI_AGENT
+  OBSERVER
+}
+
+enum ConsentStatus {
+  PENDING
+  GRANTED
+  DENIED
+}
+
+enum MembershipRole {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+enum ClaimKind {
+  FACT
+  INFERENCE
+  UNCERTAINTY
+}
+
+enum ImportanceCategory {
+  KEY_FACT
+  DECISION
+  ACTION
+  INSIGHT
+  CONCERN
+  CONTRADICTION
+  QUESTION
+  BACKGROUND
+  LOW_VALUE
+}
+
+enum AgentMode {
+  LISTENING
+  THINKING
+  SPEAKING
+  WAITING
+  CLARIFYING
+  FOLLOW_UP
+}
+
+enum ConversationEventType {
+  SESSION_STARTED
+  SESSION_ENDED
+  AGENT_JOINED
+  AGENT_LEFT
+  TURN_STARTED
+  TURN_ENDED
+  INTERRUPTION
+  FALSE_INTERRUPTION
+  TRANSCRIPT_PARTIAL
+  TRANSCRIPT_FINAL
+  TOOL_CALL
+  FACT_SAVED
+  OBJECTIVE_UPDATED
+  QUESTION_ASKED
+  QUESTION_SKIPPED
+  FOLLOW_UP
+  MOMENT
+  CONSENT
+  RECORDING_STARTED
+  RECORDING_STOPPED
+  ANALYSIS_STARTED
+  ANALYSIS_COMPLETED
+  ERROR
+  TELEMETRY
+}
+
+model User {
+  id            String   @id @default(cuid())
+  name          String?
+  email         String   @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  memberships           OrganizationMember[]
+  createdConversations  Conversation[]       @relation("CreatedConversations")
+  auditLogs             AuditLog[]
+  invitesSent           OrganizationInvite[] @relation("InvitedBy")
+}
+
+model Organization {
+  id             String   @id @default(cuid())
+  name           String
+  slug           String   @unique
+  retentionDays  Int      @default(365)
+  requireConsent Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  members       OrganizationMember[]
+  conversations Conversation[]
+  people        Person[]
+  templates     ConversationTemplate[]
+  tags          Tag[]
+  auditLogs     AuditLog[]
+  searchDocs    SearchDocument[]
+  invites       OrganizationInvite[]
+  trackers      Tracker[]
+  claims        Claim[]
+}
+
+model OrganizationMember {
+  id             String         @id @default(cuid())
+  organizationId String
+  userId         String
+  role           MembershipRole @default(MEMBER)
+  createdAt      DateTime       @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, userId])
+  @@index([userId])
+}
+
+model OrganizationInvite {
+  id             String         @id @default(cuid())
+  organizationId String
+  email          String
+  role           MembershipRole @default(MEMBER)
+  token          String         @unique
+  invitedById    String
+  expiresAt      DateTime
+  acceptedAt     DateTime?
+  createdAt      DateTime       @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  invitedBy    User         @relation("InvitedBy", fields: [invitedById], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, email])
+  @@index([organizationId])
+}
+
+model Person {
+  id             String   @id @default(cuid())
+  organizationId String
+  name           String
+  email          String?
+  title          String?
+  metadata       Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization  Organization              @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  participants  ConversationParticipant[]
+  claims        Claim[]
+  relationships PersonRelationship[]
+  outcomes      PersonOutcome[]
+
+  @@index([organizationId])
+}
+
+model Conversation {
+  id             String             @id @default(cuid())
+  organizationId String
+  type           ConversationType
+  title          String
+  purpose        String
+  status         ConversationStatus @default(DRAFT)
+  startedAt      DateTime?
+  endedAt        DateTime?
+  durationSeconds Int?
+  createdById    String
+  recordingUrl   String?
+  transcriptStatus ProcessingStatus @default(NOT_STARTED)
+  analysisStatus   ProcessingStatus @default(NOT_STARTED)
+  reportStatus     ProcessingStatus @default(NOT_STARTED)
+  livekitRoom    String             @unique
+  templateId     String?
+  metadata       Json?
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+
+  organization Organization              @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  createdBy    User                      @relation("CreatedConversations", fields: [createdById], references: [id])
+  template     ConversationTemplate?     @relation(fields: [templateId], references: [id])
+  participants ConversationParticipant[]
+  sessions     ConversationSession[]
+  transcript   Transcript?
+  objectives   ConversationObjective[]
+  topics       ConversationTopic[]
+  questions    ConversationQuestion[]
+  insights     ConversationInsight[]
+  events       ConversationEvent[]
+  report       Report?
+  actionItems  ActionItem[]
+  tags         ConversationTag[]
+  recordings   Recording[]
+  agentSessions AgentSession[]
+  searchDocs   SearchDocument[]
+  criteria     RubricCriterion[]
+  ratings      ScorecardRating[]
+  trackerHits  TrackerHit[]
+  claims       Claim[]
+  outcomes     PersonOutcome[]
+  archivedAt   DateTime?
+
+  @@index([organizationId, createdAt])
+  @@index([organizationId, status])
+}
+
+model ConversationParticipant {
+  id             String         @id @default(cuid())
+  conversationId String
+  personId       String?
+  userId         String?
+  displayName    String
+  role           ParticipantRole
+  isAgent        Boolean        @default(false)
+  identity       String
+  consentStatus  ConsentStatus  @default(PENDING)
+  consentedAt    DateTime?
+  joinedAt       DateTime?
+  leftAt         DateTime?
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  person       Person?      @relation(fields: [personId], references: [id])
+
+  @@unique([conversationId, identity])
+  @@index([conversationId])
+}
+
+model ConversationSession {
+  id             String    @id @default(cuid())
+  conversationId String
+  livekitRoom    String
+  startedAt      DateTime  @default(now())
+  endedAt        DateTime?
+  metadata       Json?
+
+  conversation Conversation  @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  agentSessions AgentSession[]
+
+  @@index([conversationId])
+}
+
+model AgentSession {
+  id             String    @id @default(cuid())
+  conversationId String
+  sessionId      String?
+  livekitRoom    String
+  model          String?
+  startedAt      DateTime  @default(now())
+  endedAt        DateTime?
+  metadata       Json?
+
+  conversation Conversation         @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  session      ConversationSession? @relation(fields: [sessionId], references: [id])
+
+  @@index([conversationId])
+}
+
+model Transcript {
+  id             String           @id @default(cuid())
+  conversationId String           @unique
+  status         ProcessingStatus @default(NOT_STARTED)
+  language       String           @default("en")
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  conversation Conversation        @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  segments     TranscriptSegment[]
+}
+
+model TranscriptSegment {
+  id               String              @id @default(cuid())
+  transcriptId     String
+  speakerId        String
+  speakerName      String
+  text             String
+  startTime        Float
+  endTime          Float
+  confidence       Float               @default(1)
+  isFinal          Boolean             @default(true)
+  importanceScore  Float?
+  importanceReason String?
+  category         ImportanceCategory?
+
+  transcript Transcript @relation(fields: [transcriptId], references: [id], onDelete: Cascade)
+
+  @@index([transcriptId, startTime])
+}
+
+model ConversationObjective {
+  id             String  @id @default(cuid())
+  conversationId String
+  title          String
+  description    String
+  importance     Float   @default(0.5)
+  status         String  @default("UNCOVERED")
+  sortOrder      Int     @default(0)
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+}
+
+model ConversationTopic {
+  id             String  @id @default(cuid())
+  conversationId String
+  title          String
+  importance     Float   @default(0.5)
+  summary        String?
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+}
+
+model ConversationQuestion {
+  id               String  @id @default(cuid())
+  conversationId   String
+  objectiveId      String?
+  topicId          String?
+  prompt           String
+  expectedEvidence Json
+  importance       Float   @default(0.5)
+  difficulty       Float   @default(0.5)
+  prerequisites    Json
+  followUpIds      Json
+  status           String  @default("PLANNED")
+  sortOrder        Int     @default(0)
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+}
+
+model ConversationInsight {
+  id             String              @id @default(cuid())
+  conversationId String
+  kind           ClaimKind
+  category       ImportanceCategory
+  title          String
+  body           String
+  timestampSeconds Float?
+  evidence       Json?
+  createdAt      DateTime            @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, category])
+}
+
+model ConversationEvent {
+  id             String                @id @default(cuid())
+  conversationId String
+  sessionId      String?
+  agentSessionId String?
+  type           ConversationEventType
+  timestamp      DateTime              @default(now())
+  data           Json
+  model          String?
+  latencyMs      Int?
+  inputTokens    Int?
+  outputTokens   Int?
+  estimatedCostUsd Float?
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, timestamp])
+  @@index([conversationId, type])
+}
+
+model Report {
+  id             String           @id @default(cuid())
+  conversationId String           @unique
+  status         ProcessingStatus @default(NOT_STARTED)
+  executiveSummary String?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  conversation Conversation    @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sections     ReportSection[]
+}
+
+model ReportSection {
+  id       String @id @default(cuid())
+  reportId String
+  key      String
+  title    String
+  body     String
+  kind     ClaimKind?
+  sortOrder Int     @default(0)
+
+  report Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@unique([reportId, key])
+}
+
+model ActionItem {
+  id             String    @id @default(cuid())
+  conversationId String
+  organizationId String
+  text           String
+  owner          String?
+  dueDate        DateTime?
+  completed      Boolean   @default(false)
+  timestampSeconds Float?
+  createdAt      DateTime  @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, completed])
+  @@index([conversationId])
+}
+
+model Tag {
+  id             String   @id @default(cuid())
+  organizationId String
+  name           String
+  createdAt      DateTime @default(now())
+
+  organization  Organization     @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  conversations ConversationTag[]
+
+  @@unique([organizationId, name])
+}
+
+model ConversationTag {
+  conversationId String
+  tagId          String
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  tag          Tag          @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([conversationId, tagId])
+}
+
+model Recording {
+  id             String    @id @default(cuid())
+  conversationId String
+  organizationId String
+  objectKey      String
+  contentType    String    @default("video/mp4")
+  durationSeconds Int?
+  egressId       String?
+  status         String    @default("PENDING")
+  byteSize       Int?
+  createdAt      DateTime  @default(now())
+  expiresAt      DateTime?
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId])
+  @@index([conversationId])
+}
+
+model RubricCriterion {
+  id             String @id @default(cuid())
+  conversationId String
+  title          String
+  description    String
+  weight         Float  @default(1)
+  strongAnchor   String
+  weakAnchor     String
+  sortOrder      Int    @default(0)
+
+  conversation Conversation      @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  rating       ScorecardRating?
+
+  @@index([conversationId])
+}
+
+model ScorecardRating {
+  id             String    @id @default(cuid())
+  criterionId    String    @unique
+  conversationId String
+  organizationId String
+  score          Int?
+  rationale      String
+  evidenceKind   ClaimKind @default(UNCERTAINTY)
+  source         String    @default("DRAFT")
+  quotes         Json
+  updatedAt      DateTime  @updatedAt
+
+  criterion    RubricCriterion @relation(fields: [criterionId], references: [id], onDelete: Cascade)
+  conversation Conversation    @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+  @@index([organizationId])
+}
+
+model Tracker {
+  id             String  @id @default(cuid())
+  organizationId String?
+  name           String
+  description    String
+  phrases        Json
+  isBuiltin      Boolean @default(false)
+
+  organization Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  hits         TrackerHit[]
+
+  @@index([organizationId])
+}
+
+enum ClaimConfidence {
+  DIRECT
+  REPEATED
+  CORROBORATED
+  CONTRADICTED
+  UNKNOWN
+}
+
+enum EvidenceRole {
+  SUPPORT
+  COUNTER
+}
+
+/// What someone said, kept separate from what Aperture infers.
+/// A contradiction links both statements and does not pick a winner.
+model Claim {
+  id              String          @id @default(cuid())
+  organizationId  String
+  organization    Organization    @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  personId        String?
+  person          Person?         @relation(fields: [personId], references: [id], onDelete: SetNull)
+  conversationId  String
+  conversation    Conversation    @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  topic           String
+  observation     String
+  interpretation  String
+  confidence      ClaimConfidence @default(UNKNOWN)
+  speakerName     String
+  createdAt       DateTime        @default(now())
+  evidence        EvidenceItem[]
+
+  @@index([organizationId, personId])
+  @@index([conversationId])
+}
+
+model EvidenceItem {
+  id             String       @id @default(cuid())
+  claimId        String
+  claim          Claim        @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  organizationId String
+  conversationId String
+  role           EvidenceRole
+  speakerName    String
+  quote          String
+  startTime      Float
+  endTime        Float?
+  createdAt      DateTime     @default(now())
+
+  @@index([claimId])
+  @@index([conversationId])
+}
+
+model PersonRelationship {
+  id             String   @id @default(cuid())
+  organizationId String
+  personId       String
+  person         Person   @relation(fields: [personId], references: [id], onDelete: Cascade)
+  otherName      String
+  kind           String
+  note           String   @default("")
+  createdAt      DateTime @default(now())
+
+  @@index([personId])
+}
+
+/// A human-recorded result. Aperture does not predict hiring or performance.
+model PersonOutcome {
+  id             String   @id @default(cuid())
+  organizationId String
+  personId       String
+  person         Person   @relation(fields: [personId], references: [id], onDelete: Cascade)
+  conversationId String?
+  conversation   Conversation? @relation(fields: [conversationId], references: [id], onDelete: SetNull)
+  decision       String
+  note           String   @default("")
+  recordedById   String?
+  createdAt      DateTime @default(now())
+
+  @@index([personId])
+}
+
+model BackgroundJob {
+  id             String   @id @default(cuid())
+  organizationId String?
+  type           String
+  payload        Json
+  status         String   @default("PENDING")
+  attempts       Int      @default(0)
+  maxAttempts    Int      @default(5)
+  runAt          DateTime @default(now())
+  lastError      String?
+  idempotencyKey String?  @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([status, runAt])
+}
+
+model AgentRequest {
+  id             String   @id @default(cuid())
+  conversationId String
+  idempotencyKey String
+  response       Json
+  createdAt      DateTime @default(now())
+
+  @@unique([conversationId, idempotencyKey])
+}
+
+model TrackerHit {
+  id             String @id @default(cuid())
+  trackerId      String
+  conversationId String
+  organizationId String
+  startTime      Float
+  speakerName    String
+  excerpt        String
+
+  tracker      Tracker      @relation(fields: [trackerId], references: [id], onDelete: Cascade)
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+  @@index([organizationId, trackerId])
+}
+
+model ConversationTemplate {
+  id             String           @id @default(cuid())
+  organizationId String?
+  type           ConversationType
+  name           String
+  description    String
+  isBuiltin      Boolean          @default(false)
+  config         Json
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  organization  Organization?  @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  conversations Conversation[]
+
+  @@index([organizationId, type])
+}
+
+model SearchDocument {
+  id             String   @id @default(cuid())
+  organizationId String
+  conversationId String
+  chunkType      String
+  content        String
+  embedding      Json?
+  metadata       Json?
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId])
+  @@index([conversationId])
+}
+
+model AuditLog {
+  id             String   @id @default(cuid())
+  organizationId String
+  userId         String?
+  action         String
+  resourceType   String
+  resourceId     String?
+  metadata       Json?
+  ip             String?
+  createdAt      DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         User?        @relation(fields: [userId], references: [id])
+
+  @@index([organizationId, createdAt])
+}

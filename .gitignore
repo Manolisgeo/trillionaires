@@ -1,0 +1,44 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# next
+.next
+out
+.vercel
+*.tsbuildinfo
+
+# python
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+*.egg-info
+.uv
+
+# env / secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# prisma
+packages/database/src/generated
+
+# logs / os
+*.log
+.DS_Store
+.turbo
+coverage
+dist
+
+# recordings / local data
+data/
+*.mp4
+*.wav
+
+# ide
+.idea
+.vscode/*
+!.vscode/extensions.json
