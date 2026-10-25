@@ -1,4 +1,4 @@
-import { cn } from "@aperture/ui";
+import { cn } from "@kimma/ui";
 import { cva, type VariantProps } from "class-variance-authority";
 import type { ButtonHTMLAttributes } from "react";
 

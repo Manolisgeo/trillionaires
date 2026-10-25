@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 
 export async function GET(

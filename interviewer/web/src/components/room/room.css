@@ -1,0 +1,61 @@
+/* Room-only styles: PDF text layer highlights, Excalidraw chrome restyled into The Reading Room, readout details. */
+
+/* The line Kimma is asking about: violet wash + 2px underline, drawn over the transparent text layer. */
+.room-cv .textLayer mark.slip-mark {
+  background: var(--color-stamp-wash);
+  box-shadow: inset 0 -2px 0 var(--color-stamp);
+  color: transparent;
+  border-radius: 0;
+  /* Taller than the glyph box so the wash reads as a highlighted line, like the approved comp. */
+  padding: 5px 2px;
+  margin: -5px -2px;
+}
+.room-cv .textLayer ::selection {
+  background: rgba(90, 74, 168, 0.28);
+}
+.room-cv .react-pdf__Page canvas {
+  display: block;
+}
+
+/* Excalidraw: keep its behaviour, move its chrome from lavender to the archive palette. */
+.room-board .excalidraw {
+  --color-primary: #5a4aa8;
+  --color-primary-darker: #43358a;
+  --color-primary-darkest: #2f2566;
+  --color-primary-hover: #43358a;
+  --color-primary-light: #eeebf7;
+  --color-primary-light-darker: #dcd6ef;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f4f5f2;
+  --color-surface-mid: #e9ecea;
+  --color-surface-high: #d5dad8;
+  --color-surface-primary-container: #eeebf7;
+  --color-on-primary-container: #2f2566;
+  --island-bg-color: #ffffff;
+  --default-border-color: #d5dad8;
+  --border-radius-md: 4px;
+  --border-radius-lg: 6px;
+  --ui-font: var(--font-public-sans), system-ui, sans-serif;
+  --shadow-island: 0 1px 0 #d5dad8, 0 0 0 1px #e3e7e5, 0 8px 18px rgba(47, 59, 69, 0.1);
+}
+.room-board .excalidraw .App-menu_top .buttonList,
+.room-board .excalidraw .Island {
+  border-radius: 4px;
+}
+.room-board .excalidraw .default-sidebar-trigger,
+.room-board .excalidraw .help-icon,
+.room-board .excalidraw .layer-ui__wrapper__footer-right {
+  display: none;
+}
+
+/* Pad: a typewriter sheet. */
+.room-pad {
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 23px, var(--color-rule-faint) 23px, var(--color-rule-faint) 24px);
+  line-height: 24px;
+  background-attachment: local;
+}
+
+/* Browser surfaces: scroll areas inside the room use thin themed scrollbars. */
+.room-scroll {
+  scrollbar-width: thin;
+}

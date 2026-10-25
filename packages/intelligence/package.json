@@ -1,5 +1,5 @@
 {
-  "name": "@aperture/intelligence",
+  "name": "@kimma/intelligence",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -12,8 +12,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@aperture/conversation": "workspace:*",
-    "@aperture/types": "workspace:*"
+    "@kimma/conversation": "workspace:*",
+    "@kimma/types": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.8.3",

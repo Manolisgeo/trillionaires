@@ -1,4 +1,4 @@
-import { extractClaims } from "@aperture/intelligence";
+import { extractClaims } from "@kimma/intelligence";
 import type { PrismaClient } from "@prisma/client";
 
 const DEMO_KEY = "demo-backend-screen";
@@ -9,7 +9,7 @@ export async function seedDemoConversation(
   userId: string,
 ) {
   const existing = await prisma.conversation.findFirst({
-    where: { organizationId: orgId, livekitRoom: `aperture-demo-${DEMO_KEY}` },
+    where: { organizationId: orgId, livekitRoom: `kimma-demo-${DEMO_KEY}` },
   });
 
   const person = await prisma.person.upsert({
@@ -84,7 +84,7 @@ export async function seedDemoConversation(
       startedAt,
       endedAt,
       durationSeconds: 34 * 60,
-      livekitRoom: `aperture-demo-${DEMO_KEY}`,
+      livekitRoom: `kimma-demo-${DEMO_KEY}`,
       transcriptStatus: "COMPLETED",
       analysisStatus: "COMPLETED",
       reportStatus: "COMPLETED",
@@ -108,9 +108,9 @@ export async function seedDemoConversation(
             consentedAt: startedAt,
           },
           {
-            displayName: "Aperture",
+            displayName: "Kimma",
             role: "AI_AGENT",
-            identity: "aperture-agent",
+            identity: "kimma-agent",
             isAgent: true,
             consentStatus: "GRANTED",
             consentedAt: startedAt,
@@ -168,7 +168,7 @@ export async function seedDemoConversation(
     importanceReason: string;
   }> = [
     {
-      speakerName: "Aperture",
+      speakerName: "Kimma",
       text: "I'm an AI participant. This conversation is recorded. I want to understand how you design and operate backend systems. Tell me about a service you designed and the tradeoffs you made.",
       startTime: 12,
       endTime: 24,
@@ -186,7 +186,7 @@ export async function seedDemoConversation(
       importanceReason: "Concrete system design claim",
     },
     {
-      speakerName: "Aperture",
+      speakerName: "Kimma",
       text: "What load did it handle, and how did you know the limits?",
       startTime: 56,
       endTime: 62,
@@ -204,7 +204,7 @@ export async function seedDemoConversation(
       importanceReason: "Concrete metric",
     },
     {
-      speakerName: "Aperture",
+      speakerName: "Kimma",
       text: "Walk me through a production failure you were involved in.",
       startTime: 210,
       endTime: 216,
@@ -222,7 +222,7 @@ export async function seedDemoConversation(
       importanceReason: "Revised consistency model plus incident ownership",
     },
     {
-      speakerName: "Aperture",
+      speakerName: "Kimma",
       text: "Earlier you described the service as strongly consistent, and just now as eventually consistent. Can you reconcile those?",
       startTime: 262,
       endTime: 274,
@@ -253,7 +253,7 @@ export async function seedDemoConversation(
   await prisma.transcriptSegment.createMany({
     data: segments.map((segment) => ({
       transcriptId: transcript.id,
-      speakerId: segment.speakerName === "Aperture" ? "aperture-agent" : "guest-jordan-hale",
+      speakerId: segment.speakerName === "Kimma" ? "kimma-agent" : "guest-jordan-hale",
       speakerName: segment.speakerName,
       text: segment.text,
       startTime: segment.startTime,
@@ -595,7 +595,7 @@ async function attachDemoClaims(prisma: PrismaClient, conversationId: string, or
       text: segment.text,
       startTime: segment.startTime,
       endTime: segment.endTime,
-      isAgent: segment.speakerName === "Aperture",
+      isAgent: segment.speakerName === "Kimma",
     })),
     objectives.map((objective) => ({ title: objective.title, text: objective.description })),
   );

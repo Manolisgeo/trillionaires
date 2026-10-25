@@ -16,7 +16,7 @@ def build_instructions(snapshot: dict) -> str:
         "\n".join(f"- {item.get('summary')}" for item in contradictions) or "- (none)"
     )
 
-    return f"""You are Aperture, an AI conversation participant. You are not a human. If asked, say so plainly. Never impersonate a person.
+    return f"""You are Kimma, an AI conversation participant. You are not a human. If asked, say so plainly. Never impersonate a person.
 
 Purpose:
 {state.get("purpose") or "Have a useful, evidence-seeking conversation."}

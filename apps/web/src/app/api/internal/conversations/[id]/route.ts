@@ -7,9 +7,9 @@ import {
   ingestTranscriptSegment,
   nextDecision,
 } from "@/server/agent-runtime";
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { enqueueJob, processDueJobs } from "@/server/jobs";
-import type { AgentMode, Fact, TranscriptSegment } from "@aperture/types";
+import type { AgentMode, Fact, TranscriptSegment } from "@kimma/types";
 import { after } from "next/server";
 
 export async function GET(

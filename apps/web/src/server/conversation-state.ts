@@ -1,4 +1,4 @@
-import type { ConversationState } from "@aperture/types";
+import type { ConversationState } from "@kimma/types";
 import { getRedis } from "@/server/redis";
 
 const TTL_SECONDS = 60 * 60 * 24;

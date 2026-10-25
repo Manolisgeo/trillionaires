@@ -1,5 +1,5 @@
-import { selectNextAction } from "@aperture/conversation";
-import type { ConversationState, NextAction, NextActionType, Question } from "@aperture/types";
+import { selectNextAction } from "@kimma/conversation";
+import type { ConversationState, NextAction, NextActionType, Question } from "@kimma/types";
 
 /** What the controller may do. The realtime model may propose; this list is what actually happens. */
 export type ControllerAction =
@@ -38,7 +38,7 @@ const ACTION_MAP: Record<NextActionType, ControllerAction> = {
 function lastHuman(state: ConversationState) {
   for (let i = state.recentTranscript.length - 1; i >= 0; i -= 1) {
     const segment = state.recentTranscript[i];
-    if (segment && !segment.speakerName.toLowerCase().includes("aperture")) return segment;
+    if (segment && !segment.speakerName.toLowerCase().includes("kimma")) return segment;
   }
   return undefined;
 }

@@ -60,7 +60,7 @@ export function ConversationToolbar({
     for (const section of report.sections) {
       parts.push(`## ${section.title}${section.kind ? ` (${section.kind})` : ""}`, section.body, "");
     }
-    parts.push("_Aperture produces evidence. Humans make irreversible decisions._");
+    parts.push("_Kimma produces evidence. Humans make irreversible decisions._");
     download(`${slug(title)}-report.md`, parts.join("\n"), "text/markdown;charset=utf-8");
     toast.success("Report downloaded.");
   }

@@ -114,8 +114,8 @@ export function draftScorecard(criteria: CriterionInput[], lines: TranscriptLine
         observation,
         interpretation:
           quotes.length > 0
-            ? "Potential contradiction. Both statements stay attached. Aperture does not decide which one is true."
-            : "A conflicting statement is attached. Aperture does not treat it as settled.",
+            ? "Potential contradiction. Both statements stay attached. Kimma does not decide which one is true."
+            : "A conflicting statement is attached. Kimma does not treat it as settled.",
         rationale: "Supporting and conflicting quotes are both on this criterion. A person has to assess them.",
         evidenceKind: "UNCERTAINTY" as const,
         quotes,
@@ -206,7 +206,7 @@ export function answerFromTranscript(
 
   if (ranked.length === 0) {
     return {
-      answer: "Nothing in this transcript answers that. Aperture will not invent a claim.",
+      answer: "Nothing in this transcript answers that. Kimma will not invent a claim.",
       quotes: [],
     };
   }

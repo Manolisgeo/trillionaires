@@ -1,8 +1,8 @@
 "use server";
 
-import { prisma } from "@aperture/database";
-import { templateByType } from "@aperture/conversation";
-import type { ConversationType } from "@aperture/types";
+import { prisma } from "@kimma/database";
+import { templateByType } from "@kimma/conversation";
+import type { ConversationType } from "@kimma/types";
 import { requireOrg } from "@/server/org";
 import { writeAudit } from "@/server/audit";
 import { revalidatePath } from "next/cache";
@@ -56,7 +56,7 @@ export async function createConversationAction(formData: FormData) {
       type,
       title: parsed.data.title,
       purpose: parsed.data.purpose,
-      livekitRoom: `aperture-${crypto.randomUUID()}`,
+      livekitRoom: `kimma-${crypto.randomUUID()}`,
       status: "DRAFT",
       metadata: { template: template.name },
       participants: {
@@ -77,9 +77,9 @@ export async function createConversationAction(formData: FormData) {
             consentStatus: "PENDING",
           },
           {
-            displayName: "Aperture",
+            displayName: "Kimma",
             role: "AI_AGENT",
-            identity: "aperture-agent",
+            identity: "kimma-agent",
             isAgent: true,
             consentStatus: "GRANTED",
             consentedAt: new Date(),

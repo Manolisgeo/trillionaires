@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 
 export class HttpError extends Error {
   constructor(

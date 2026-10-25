@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { applyRetention } from "@/server/retention";
 
 type JobInput = {

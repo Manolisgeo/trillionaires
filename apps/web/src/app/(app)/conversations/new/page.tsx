@@ -1,6 +1,6 @@
 import { CreateConversationForm } from "@/components/conversation/create-form";
 import { PageHeader } from "@/components/shell/page-header";
-import type { ConversationType } from "@aperture/types";
+import type { ConversationType } from "@kimma/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "New conversation" };

@@ -7,13 +7,13 @@ loadEnv({ path: resolve(__dirname, "../../.env.local") });
 
 const nextConfig: NextConfig = {
   transpilePackages: [
-    "@aperture/ai",
-    "@aperture/config",
-    "@aperture/conversation",
-    "@aperture/database",
-    "@aperture/intelligence",
-    "@aperture/types",
-    "@aperture/ui",
+    "@kimma/ai",
+    "@kimma/config",
+    "@kimma/conversation",
+    "@kimma/database",
+    "@kimma/intelligence",
+    "@kimma/types",
+    "@kimma/ui",
   ],
   serverExternalPackages: ["@prisma/client", "ioredis", "bcryptjs"],
 };

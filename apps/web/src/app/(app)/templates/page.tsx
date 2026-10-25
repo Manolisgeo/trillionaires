@@ -1,5 +1,5 @@
-import { builtinTemplates } from "@aperture/conversation";
-import { prisma } from "@aperture/database";
+import { builtinTemplates } from "@kimma/conversation";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import Link from "next/link";
 import { PageHeader } from "@/components/shell/page-header";

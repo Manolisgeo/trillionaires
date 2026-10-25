@@ -1,5 +1,5 @@
 {
-  "name": "aperture",
+  "name": "kimma",
   "private": true,
   "packageManager": "pnpm@9.15.0",
   "scripts": {
@@ -10,10 +10,10 @@
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
     "test": "turbo test",
-    "db:generate": "pnpm --filter @aperture/database generate",
-    "db:migrate": "pnpm --filter @aperture/database migrate",
-    "db:push": "pnpm --filter @aperture/database push",
-    "db:seed": "pnpm --filter @aperture/database seed",
+    "db:generate": "pnpm --filter @kimma/database generate",
+    "db:migrate": "pnpm --filter @kimma/database migrate",
+    "db:push": "pnpm --filter @kimma/database push",
+    "db:seed": "pnpm --filter @kimma/database seed",
     "infra:up": "docker compose -f infrastructure/docker-compose.yml up -d",
     "infra:down": "docker compose -f infrastructure/docker-compose.yml down"
   },

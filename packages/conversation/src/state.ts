@@ -3,7 +3,7 @@ import type {
   Fact,
   Objective,
   TranscriptSegment,
-} from "@aperture/types";
+} from "@kimma/types";
 
 const ROLLING_TRANSCRIPT_LIMIT = 24;
 

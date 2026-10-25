@@ -50,8 +50,8 @@ export function ScorecardPanel({
   return (
     <div className="space-y-12">
       <p className="max-w-2xl text-sm leading-6 text-muted">
-        Each criterion shows the quote, any conflicting quote, and a confidence label. Aperture does
-        not turn that into a 1–4 score. A person does, and Aperture does not make the hiring,
+        Each criterion shows the quote, any conflicting quote, and a confidence label. Kimma does
+        not turn that into a 1–4 score. A person does, and Kimma does not make the hiring,
         purchasing, or research decision.
       </p>
 
@@ -225,7 +225,7 @@ export function AskTranscript({ conversationId }: { conversationId: string }) {
         Ask this transcript
       </h2>
       <p className="mt-2 text-sm text-muted">
-        Answers are quotes from this conversation. If the transcript does not say it, Aperture says so.
+        Answers are quotes from this conversation. If the transcript does not say it, Kimma says so.
       </p>
       <form onSubmit={onSubmit} className="mt-4 flex gap-2">
         <input

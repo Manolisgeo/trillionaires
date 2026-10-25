@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import {
   addFact,
   appendTranscript,
@@ -7,15 +7,15 @@ import {
   questionsCoveredByUtterance,
   scoreSegment,
   setAgentMode,
-} from "@aperture/conversation";
-import { conversationMemory, decide } from "@aperture/intelligence";
+} from "@kimma/conversation";
+import { conversationMemory, decide } from "@kimma/intelligence";
 import type {
   AgentMode,
   ConversationState,
   Fact,
   NextAction,
   TranscriptSegment,
-} from "@aperture/types";
+} from "@kimma/types";
 import { readConversationState, writeConversationState } from "@/server/conversation-state";
 
 export async function loadOrCreateState(conversationId: string): Promise<ConversationState> {

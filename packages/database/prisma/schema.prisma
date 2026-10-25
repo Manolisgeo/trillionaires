@@ -551,7 +551,7 @@ enum EvidenceRole {
   COUNTER
 }
 
-/// What someone said, kept separate from what Aperture infers.
+/// What someone said, kept separate from what Kimma infers.
 /// A contradiction links both statements and does not pick a winner.
 model Claim {
   id              String          @id @default(cuid())
@@ -603,7 +603,7 @@ model PersonRelationship {
   @@index([personId])
 }
 
-/// A human-recorded result. Aperture does not predict hiring or performance.
+/// A human-recorded result. Kimma does not predict hiring or performance.
 model PersonOutcome {
   id             String   @id @default(cuid())
   organizationId String

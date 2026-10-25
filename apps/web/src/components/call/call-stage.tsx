@@ -137,7 +137,7 @@ export function CallStage({ conversationId, title }: { conversationId: string; t
               agentSpeaking ? "scale-105 bg-emerald-400/25" : "bg-white/10"
             }`}
           />
-          <div className="mt-4 text-sm">Aperture</div>
+          <div className="mt-4 text-sm">Kimma</div>
           <div className="text-xs text-white/50">AI · {assistant.state || "listening"}</div>
           <div className="mt-2 rounded-full border border-white/20 px-2 py-0.5 text-[10px] uppercase tracking-wide text-white/55">
             AI-generated
@@ -146,7 +146,7 @@ export function CallStage({ conversationId, title }: { conversationId: string; t
         <p className="text-xs text-white/40 md:col-span-2">
           {participants
             .map((p) => {
-              const agent = p.identity === "aperture-agent" || p.name === "Aperture";
+              const agent = p.identity === "kimma-agent" || p.name === "Kimma";
               return `${p.name || p.identity}${agent ? " (AI)" : ""}${p.isSpeaking ? " · speaking" : ""}`;
             })
             .join("  ·  ")}

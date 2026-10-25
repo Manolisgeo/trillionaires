@@ -2,7 +2,7 @@
 
 import { hash } from "bcryptjs";
 import { AuthError } from "next-auth";
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { signIn } from "@/auth";
 import { requireOrg } from "@/server/org";
 import { writeAudit } from "@/server/audit";

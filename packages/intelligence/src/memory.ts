@@ -1,4 +1,4 @@
-import type { ConversationState } from "@aperture/types";
+import type { ConversationState } from "@kimma/types";
 import type { ExtractedClaim } from "./claims";
 
 export type MemoryLayers = {

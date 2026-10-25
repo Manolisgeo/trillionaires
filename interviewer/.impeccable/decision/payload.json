@@ -1,0 +1,169 @@
+{
+  "title": "Choose the visual world for Kimma.ai",
+  "question": "The roll assigned The Reading Room. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Reading Room",
+      "kicker": "THE ROLL",
+      "lineage": "archival reading rooms, catalog cards and finding aids",
+      "thesis": "Your background handled like an archive: every claim catalogued with its provenance, every judgment cross-referenced to the moment it was said.",
+      "palette": ["#2F3B45", "#F4F5F2", "#5A4AA8", "#C23B2E", "#A9B6BD"],
+      "materials": ["catalog card stock with a red top rule", "violet rubber-stamp ink for everything the AI marks", "archival slip markers", "typewritten call numbers"],
+      "viewport": "The desk: the CV at true page scale with a violet slip marker landing on the line being asked about, the question typed on a catalog card above it, a quiet violet stamp as the AI's presence, and a finding-aid outline of the phases at right.",
+      "risk": "Archives can read dusty or slow beside a realtime AI, and card stock invites the cream-paper default; the grammar must live in details, never in the call controls.",
+      "raised": [
+        { "from": "challenger-crouwel", "raise": "Crouwel: the catalog card's ruled lines become the literal layout armature; every element snaps to one card-rule unit." },
+        { "from": "challenger-saville", "raise": "Saville: total numbering; every role, candidate, interview, claim, quote and rating carries its call number as its identity." },
+        { "from": "challenger-timetable", "raise": "Timetable: dense surfaces (transcript, report, catalog) use one text size; rank comes from weight, case, reversal and rule." },
+        { "from": "challenger-feed", "raise": "Feed: exactly one document owns the desk at a time; switching documents is a hard swap, never tiles." },
+        { "from": "challenger-specimen", "raise": "Specimen: live typewriter readouts (timecode, phase clock, page:line) are the only chrome that moves." }
+      ],
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "question on a catalog card", "x": 0, "y": 0, "w": 8, "h": 2 },
+          { "label": "CV desk + violet slip marker", "x": 0, "y": 2, "w": 8, "h": 7, "accent": true },
+          { "label": "AI stamp presence", "x": 8, "y": 0, "w": 4, "h": 2 },
+          { "label": "finding-aid phases", "x": 8, "y": 2, "w": 4, "h": 3 },
+          { "label": "typed transcript + timecodes", "x": 8, "y": 5, "w": 4, "h": 4 },
+          { "label": "controls · RECORDING stamp", "x": 0, "y": 9, "w": 12, "h": 1 }
+        ]
+      }
+    },
+    {
+      "id": "model-pick",
+      "label": "The Control Room",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "live broadcast control rooms and rundowns",
+      "thesis": "The interview as a live produced segment: an ON AIR tally for honest recording, a rundown of phases, and timecode on every piece of evidence.",
+      "palette": ["#16181B", "#E8E6E1", "#D2372B", "#3FA7A0"],
+      "materials": ["tally lamps", "program and preview monitors", "timecode readouts"],
+      "viewport": "The program monitor shows the agent's screen, preview shows what's next, and the rundown runs down the side with the live segment lit.",
+      "risk": "Near-black with a lit accent is a look many AI products already ship, and a studio can feel like being on trial to a nervous candidate.",
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "program monitor (agent screen)", "x": 0, "y": 0, "w": 8, "h": 6, "accent": true },
+          { "label": "preview", "x": 8, "y": 0, "w": 4, "h": 3 },
+          { "label": "rundown", "x": 8, "y": 3, "w": 4, "h": 6 },
+          { "label": "captions", "x": 0, "y": 6, "w": 8, "h": 3 },
+          { "label": "tally + controls", "x": 0, "y": 9, "w": 12, "h": 1 }
+        ]
+      }
+    },
+    {
+      "id": "challenger-monochrome",
+      "label": "Claim and Proof",
+      "verdict": "competitive",
+      "lineage": "monochrome software product marketing",
+      "thesis": "Every rating sits beside the proof that earns it: near-black on near-white, one accent, a claim and then its quote.",
+      "palette": ["#FAFAFA", "#18181B", "#71717A", "#2F6FEB"],
+      "materials": ["fine neutral scale", "framed evidence", "hairline ghost controls"],
+      "viewport": "A calm two-column room: the agent's screen on the left, captions and claim-proof pairs on the right, one accent for the live state.",
+      "case": "Fuses cleanly: claim-then-proof is exactly evidence-linked scoring, and recruiters live in this look; holds audience identification and ties on clarity.",
+      "risk": "It is how most AI recruiting tools already look, so Kimma.ai blends in with Metaview and Ashby.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing.webp",
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "agent screen", "x": 0, "y": 0, "w": 7, "h": 9, "accent": true },
+          { "label": "captions", "x": 7, "y": 0, "w": 5, "h": 5 },
+          { "label": "claim + proof pairs", "x": 7, "y": 5, "w": 5, "h": 4 },
+          { "label": "controls", "x": 0, "y": 9, "w": 12, "h": 1 }
+        ]
+      }
+    },
+    {
+      "id": "challenger-crouwel",
+      "label": "Grid Specimen",
+      "verdict": "declined",
+      "lineage": "Wim Crouwel gridded type specimens",
+      "thesis": "Every screen built cell by cell on a visible construction grid.",
+      "palette": ["#FFFFFF", "#1A1A1A", "#2B59C3"],
+      "materials": ["visible construction grid", "grid-built letterforms"],
+      "viewport": "A monumental grid-built headline over the candidate's record.",
+      "case": "Fuses poorly: neither recruiters nor candidates identify with type-specimen posters, and a monumental grid fights a calm call.",
+      "kept": "The card's ruled lines as the literal layout armature.",
+      "risk": "Design-world spectacle that upstages the interview.",
+      "hero": "https://impeccable.style/worlds/cards/crouwel-grid-specimen-hero.webp"
+    },
+    {
+      "id": "challenger-saville",
+      "label": "Catalog Sleeve",
+      "verdict": "declined",
+      "lineage": "Factory Records catalog identity",
+      "thesis": "Every artifact gets a catalog number, and color codes stand in for words.",
+      "palette": ["#0E0E0E", "#F2F2F2", "#E04B3A", "#3D7CC9"],
+      "materials": ["matte black", "white hairline plot", "coded color strips"],
+      "viewport": "The interview's audio plotted as a stack of white lines with only its number as the headline.",
+      "case": "Fuses poorly: coded labels hide meaning from anxious candidates and busy recruiters.",
+      "kept": "Total numbering: every artifact carries its number as its identity.",
+      "risk": "Mystique where the product needs plain clarity.",
+      "hero": "https://impeccable.style/worlds/cards/brand-identity-canon-saville-catalog-sleeve-hero.webp"
+    },
+    {
+      "id": "challenger-timetable",
+      "label": "Timetable Rack",
+      "verdict": "declined",
+      "lineage": "1970s pocket airline timetables on a light table",
+      "thesis": "One type size everywhere; rank carried by weight, case, reversal and rule.",
+      "palette": ["#D9A520", "#22262A", "#F1ECDD", "#C7382B", "#2E6B47"],
+      "materials": ["tinted glass slides", "lit goldenrod bed"],
+      "viewport": "Interview schedules as raked timetable slides.",
+      "case": "Fuses poorly: raked containers and goldenrod glare cost a live call its clarity.",
+      "kept": "One text size on dense surfaces; rank by weight, case, reversal and rule.",
+      "risk": "Raked layouts fight scanning.",
+      "hero": "https://impeccable.style/worlds/cards/rw-timetable-slide-rack-hero.webp"
+    },
+    {
+      "id": "challenger-feed",
+      "label": "Vertical Feed",
+      "verdict": "declined",
+      "lineage": "full-bleed vertical video feeds",
+      "thesis": "One item owns the entire viewport, the next one snap away.",
+      "palette": ["#000000", "#FFFFFF"],
+      "materials": ["full-bleed media", "glyph rail"],
+      "viewport": "Each claim full-screen, one snap at a time.",
+      "case": "Fuses poorly: full-screen snapping fits neither a recruiter's scan nor a dense report.",
+      "kept": "One document owns the desk at a time; switching is a hard swap.",
+      "risk": "Entertainment grammar in a hiring decision.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-vertical-video-feed-surface-hero.webp"
+    },
+    {
+      "id": "challenger-specimen",
+      "label": "Variable Specimen",
+      "verdict": "declined",
+      "lineage": "interactive variable-font specimens",
+      "thesis": "Hierarchy by scale contrast alone, with a live readout of every value.",
+      "palette": ["#FAFAF7", "#111111", "#E4572E"],
+      "materials": ["flat paper", "monospace readouts"],
+      "viewport": "A giant letter that morphs as the conversation moves.",
+      "case": "Fuses poorly: axis-morphing type has no job in an interview.",
+      "kept": "Live mono readouts are the only moving chrome.",
+      "risk": "Ornament with no task.",
+      "hero": "https://impeccable.style/worlds/cards/variable-font-specimen-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "Clean AI-recruiting software with a Meet-style dark call stage, executed at full craft.",
+    "palette": ["#FFFFFF", "#0F172A", "#6366F1"],
+    "materials": ["rounded cards", "dark video stage"],
+    "viewport": "A video-call stage with an AI tile and a side panel for captions and notes.",
+    "risk": "Indistinguishable from the competition by design.",
+    "wireframe": {
+      "cols": 12, "rows": 10,
+      "regions": [
+        { "label": "AI tile", "x": 0, "y": 0, "w": 8, "h": 9, "accent": true },
+        { "label": "side panel", "x": 8, "y": 0, "w": 4, "h": 9 },
+        { "label": "controls", "x": 0, "y": 9, "w": 12, "h": 1 }
+      ]
+    }
+  },
+  "steer": true
+}

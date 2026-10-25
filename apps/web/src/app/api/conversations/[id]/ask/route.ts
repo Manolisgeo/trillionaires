@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@aperture/database";
-import { answerFromTranscript } from "@aperture/conversation";
+import { prisma } from "@kimma/database";
+import { answerFromTranscript } from "@kimma/conversation";
 import { requireOrg } from "@/server/org";
 
 export async function POST(request: Request, context: { params: Promise<{ id: string }> }) {

@@ -1,6 +1,6 @@
 # How the category leaders are set up
 
-Aperture is judged against four products companies already pay for. This note records what each one actually does, how it is configured, and what Aperture implements in English. Integrations that would be fake — ATS write-back, Zoom, telephony — are listed as not built.
+Kimma.ai is judged against four products companies already pay for. This note records what each one actually does, how it is configured, and what Kimma.ai implements in English. Integrations that would be fake — ATS write-back, Zoom, telephony — are listed as not built.
 
 Language policy: the participant, the transcript search, the scorecard, and the trackers are English. Metaview advertises 50+ languages. Matching that without a speech provider tuned per language would be a worse product, not a broader one.
 
@@ -16,7 +16,7 @@ How it is set up:
 4. The scorecard arrives pre-filled. The interviewer assigns the rating. The quote stays attached.
 5. The same scale is used across interviewers so a debrief can see disagreement.
 
-Aperture setup:
+Kimma.ai setup:
 
 - Creating a conversation writes one rubric criterion per objective, with a strong anchor and a weak anchor.
 - After analysis, `draftScorecard` attaches supporting quotes and any conflicting quotes, and labels confidence (`DIRECT`, `REPEATED`, `CONTRADICTED`, `UNKNOWN`). It does not assign a 1–4 score. A person does.
@@ -36,7 +36,7 @@ How it is set up:
 4. A hiring manager can watch the clip instead of the hour.
 5. Feedback is submitted by a person. The tool does not hire.
 
-Aperture setup:
+Kimma.ai setup:
 
 - The guide is the template: purpose, objectives, and planned questions. The agent may skip a question the participant already answered.
 - Important moments, tracker hits, and scorecard quotes are the clips. They seek the transcript. There is no separate video product until a recording exists.
@@ -54,7 +54,7 @@ How trackers are set up:
 3. Hits show up on the call, in search, and in team stats.
 4. A hit is not a score. It is a place to listen.
 
-Aperture setup:
+Kimma.ai setup:
 
 - Built-in English trackers: Metrics, Incidents, Commitments, Compensation, Competing option, Decision process. Phrases are stored on the tracker and matched case-insensitively inside the organization.
 - Owners and admins add a tracker from Signals with a name and comma-separated phrases.
@@ -74,7 +74,7 @@ How a guide is set up:
 3. Weights change how much a criterion carries. Default is equal.
 4. The report explains the score. A human still decides.
 
-Aperture setup:
+Kimma.ai setup:
 
 - The agent speaks English, says it is an AI, and asks one question at a time.
 - Follow-ups come from conversation state: vague answers, contradictions, and uncovered objectives. It does not walk the question list if the topic was already covered.

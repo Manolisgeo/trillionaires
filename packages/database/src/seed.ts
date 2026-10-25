@@ -36,24 +36,24 @@ const builtinTrackers: Array<{ name: string; description: string; phrases: strin
 ];
 
 async function main() {
-  const passwordHash = await hash("aperture-dev", 12);
+  const passwordHash = await hash("kimma-dev", 12);
 
   const user = await prisma.user.upsert({
-    where: { email: "founder@aperture.local" },
+    where: { email: "founder@kimma.local" },
     update: {},
     create: {
-      email: "founder@aperture.local",
+      email: "founder@kimma.local",
       name: "Founder",
       passwordHash,
     },
   });
 
   const org = await prisma.organization.upsert({
-    where: { slug: "aperture" },
+    where: { slug: "kimma" },
     update: {},
     create: {
-      name: "Aperture",
-      slug: "aperture",
+      name: "Kimma",
+      slug: "kimma",
       retentionDays: 365,
       requireConsent: true,
     },
@@ -166,7 +166,7 @@ async function main() {
     }
   }
 
-  console.log("Seeded founder@aperture.local / aperture-dev");
+  console.log("Seeded founder@kimma.local / kimma-dev");
   await seedDemoConversation(prisma, org.id, user.id);
   console.log("Seeded demo conversation: Staff backend screen · Jordan Hale");
 }

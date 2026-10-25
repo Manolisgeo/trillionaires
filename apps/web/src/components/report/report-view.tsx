@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@aperture/ui";
+import { cn } from "@kimma/ui";
 
 const TIMESTAMP = /\[(\d{1,2}:\d{2})\]/g;
 
@@ -55,7 +55,7 @@ export function ReportView({
         </section>
       ))}
       <p className="text-xs leading-5 text-muted">
-        Aperture produces evidence and assessment. Humans make irreversible decisions — hiring,
+        Kimma produces evidence and assessment. Humans make irreversible decisions — hiring,
         purchasing, and research conclusions stay with you.
       </p>
     </article>

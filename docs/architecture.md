@@ -1,6 +1,6 @@
 # Architecture
 
-Aperture is the intelligence layer for human conversations. A conversation is still the live session, but the durable object is a person: conversations produce claims, claims point at evidence and counterevidence, and a controller decides the next move. The realtime model proposes. It does not own that decision.
+Kimma.ai is the intelligence layer for human conversations. A conversation is still the live session, but the durable object is a person: conversations produce claims, claims point at evidence and counterevidence, and a controller decides the next move. The realtime model proposes. It does not own that decision.
 
 Interviews, sales calls, research sessions, meetings, and later phone or third-party meeting joins are conversation types on that shared engine.
 

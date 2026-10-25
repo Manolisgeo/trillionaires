@@ -6,9 +6,9 @@ import {
   estimateChatCostUsd,
   OpenAiAnalysisProvider,
   OpenAiEmbeddingProvider,
-} from "@aperture/ai";
-import { prisma } from "@aperture/database";
-import type { StructuredReport } from "@aperture/types";
+} from "@kimma/ai";
+import { prisma } from "@kimma/database";
+import type { StructuredReport } from "@kimma/types";
 import { cosineSimilarity } from "@/server/search-math";
 import { refreshScorecard, refreshTrackerHits } from "@/server/evidence";
 import { persistClaims } from "@/server/claims";

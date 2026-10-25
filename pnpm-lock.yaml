@@ -19,25 +19,25 @@ importers:
 
   apps/web:
     dependencies:
-      '@aperture/ai':
+      '@kimma/ai':
         specifier: workspace:*
         version: link:../../packages/ai
-      '@aperture/config':
+      '@kimma/config':
         specifier: workspace:*
         version: link:../../packages/config
-      '@aperture/conversation':
+      '@kimma/conversation':
         specifier: workspace:*
         version: link:../../packages/conversation
-      '@aperture/database':
+      '@kimma/database':
         specifier: workspace:*
         version: link:../../packages/database
-      '@aperture/intelligence':
+      '@kimma/intelligence':
         specifier: workspace:*
         version: link:../../packages/intelligence
-      '@aperture/types':
+      '@kimma/types':
         specifier: workspace:*
         version: link:../../packages/types
-      '@aperture/ui':
+      '@kimma/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@auth/prisma-adapter':
@@ -140,10 +140,10 @@ importers:
 
   evals:
     dependencies:
-      '@aperture/conversation':
+      '@kimma/conversation':
         specifier: workspace:*
         version: link:../packages/conversation
-      '@aperture/types':
+      '@kimma/types':
         specifier: workspace:*
         version: link:../packages/types
     devDependencies:
@@ -156,7 +156,7 @@ importers:
 
   packages/ai:
     dependencies:
-      '@aperture/types':
+      '@kimma/types':
         specifier: workspace:*
         version: link:../types
       openai:
@@ -179,7 +179,7 @@ importers:
 
   packages/conversation:
     dependencies:
-      '@aperture/types':
+      '@kimma/types':
         specifier: workspace:*
         version: link:../types
     devDependencies:
@@ -192,7 +192,7 @@ importers:
 
   packages/database:
     dependencies:
-      '@aperture/intelligence':
+      '@kimma/intelligence':
         specifier: workspace:*
         version: link:../intelligence
       '@prisma/client':
@@ -217,10 +217,10 @@ importers:
 
   packages/intelligence:
     dependencies:
-      '@aperture/conversation':
+      '@kimma/conversation':
         specifier: workspace:*
         version: link:../conversation
-      '@aperture/types':
+      '@kimma/types':
         specifier: workspace:*
         version: link:../types
     devDependencies:

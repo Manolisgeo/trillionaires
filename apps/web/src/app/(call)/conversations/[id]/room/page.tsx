@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import { notFound } from "next/navigation";
 import { CallRoom } from "@/components/call/call-room";

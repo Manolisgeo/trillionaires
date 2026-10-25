@@ -23,7 +23,7 @@ export function AcceptInviteForm({
       detail="Conversations, transcripts, and reports in this organization stay here. The AI participant is always disclosed."
       footer="Accepting does not grant access to any other tenant."
     >
-      <p className="text-sm font-medium tracking-tight lg:hidden">Aperture</p>
+      <p className="text-sm font-medium tracking-tight lg:hidden">Kimma</p>
       <h1 className="text-3xl font-medium tracking-tight">Join {organizationName}</h1>
       <p className="mt-2 text-sm text-muted">
         Invited as <span className="text-ink">{email}</span>

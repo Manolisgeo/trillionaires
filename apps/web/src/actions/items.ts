@@ -1,6 +1,6 @@
 "use server";
 
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import { writeAudit } from "@/server/audit";
 import { revalidatePath } from "next/cache";

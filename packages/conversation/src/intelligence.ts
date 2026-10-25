@@ -4,7 +4,7 @@ import type {
   IntelligenceSnapshot,
   NextAction,
   Question,
-} from "@aperture/types";
+} from "@kimma/types";
 import { selectNextAction } from "./strategy";
 
 export function buildIntelligenceSnapshot(

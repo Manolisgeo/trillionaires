@@ -1,0 +1,6 @@
+# NOTES ui-fix2 (fix round 2)
+
+F2 report citations: `citationAt` (report/citations.ts) now falls back to the latest agent line that contains a planned question when an interview has no `question` desk events, so the violet Q-tag shows beside the timecode and T-line either way. Seeded report checked: Q2.3, Q2.1, Q3.1 ... match the room slip.
+F5 `fixtureReport` (prep/fixtures.ts, mock mode): each criterion gets the best keyword-matching whole sentence (min 8 words, distinct per criterion), a rationale that quotes that sentence, and no rating ("Insufficient evidence") when nothing the candidate said addresses it. Greetings and thanks are never evidence.
+F6 `data/db.json` re-seeded with `pnpm exec tsx scripts/seed-demo.ts` (2 roles with distinct titles, 3 candidates with distinct names, 2 interviews). The extra "Senior Backend Engineer" role, "Maya Okonkwo" and the generic-template report came from a capture run; re-run the seed after any capture.
+F7 room mobile: CV pane gets a sticky toolbar below 560px wide (A- / A+ steps of 600, 760, 920px page width, default 760 so CV type is about 12px; "Open full CV" opens the PDF in a new tab). Pane still scrolls sideways; the slip stays in the margin.

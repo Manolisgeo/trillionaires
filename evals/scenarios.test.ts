@@ -4,8 +4,8 @@ import {
   questionsCoveredByUtterance,
   scoreSegment,
   selectNextAction,
-} from "@aperture/conversation";
-import type { ConversationState, Question } from "@aperture/types";
+} from "@kimma/conversation";
+import type { ConversationState, Question } from "@kimma/types";
 
 function state(partial: Partial<ConversationState> = {}): ConversationState {
   return {
@@ -24,7 +24,7 @@ function state(partial: Partial<ConversationState> = {}): ConversationState {
       ],
       participants: [
         { id: "human", displayName: "Alex", role: "PARTICIPANT", isAgent: false },
-        { id: "agent", displayName: "Aperture", role: "AI_AGENT", isAgent: true },
+        { id: "agent", displayName: "Kimma", role: "AI_AGENT", isAgent: true },
       ],
     }),
     conversationTimeSeconds: 30,
@@ -164,7 +164,7 @@ describe("evals", () => {
     expect(action.questionId === "q1").toBe(false);
   });
 
-  it("contradictions: follow up", () => {
+  it("contradictions: challenge to reconcile, without deciding", () => {
     const action = selectNextAction(
       state({
         detectedContradictions: [
@@ -192,7 +192,9 @@ describe("evals", () => {
       }),
       questions,
     );
-    expect(action.type).toBe("FOLLOW_UP");
+    expect(action.type).toBe("CHALLENGE");
+    expect(action.prompt).toMatch(/strongly consistent/);
+    expect(action.prompt).toMatch(/eventually consistent/);
   });
 
   it("filler / noise is low-value, not deleted", () => {

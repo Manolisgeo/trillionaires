@@ -1,4 +1,4 @@
-import type { AvatarProvider, MeetingProvider, TelephonyProvider } from "@aperture/types";
+import type { AvatarProvider, MeetingProvider, TelephonyProvider } from "@kimma/types";
 
 /** Native LiveKit is the only meeting implementation in the MVP. */
 export const livekitMeetingProvider: MeetingProvider = {

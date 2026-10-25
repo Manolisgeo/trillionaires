@@ -1,4 +1,4 @@
-import { cn } from "@aperture/ui";
+import { cn } from "@kimma/ui";
 import type { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
 
 export function Input({ className, ...props }: InputHTMLAttributes<HTMLInputElement>) {

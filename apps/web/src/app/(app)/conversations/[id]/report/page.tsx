@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import { notFound } from "next/navigation";
 import { ConversationWorkspace } from "@/components/conversation/workspace";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { typeLabel } from "@/lib/time";
 import { evidenceFields } from "@/lib/quotes";
-import { talkStats } from "@aperture/conversation";
+import { talkStats } from "@kimma/conversation";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
