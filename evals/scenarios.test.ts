@@ -164,7 +164,7 @@ describe("evals", () => {
     expect(action.questionId === "q1").toBe(false);
   });
 
-  it("contradictions: follow up", () => {
+  it("contradictions: challenge to reconcile, without deciding", () => {
     const action = selectNextAction(
       state({
         detectedContradictions: [
@@ -192,7 +192,9 @@ describe("evals", () => {
       }),
       questions,
     );
-    expect(action.type).toBe("FOLLOW_UP");
+    expect(action.type).toBe("CHALLENGE");
+    expect(action.prompt).toMatch(/strongly consistent/);
+    expect(action.prompt).toMatch(/eventually consistent/);
   });
 
   it("filler / noise is low-value, not deleted", () => {
