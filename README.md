@@ -1,4 +1,4 @@
-# Aperture
+# Kimma.ai
 
 Conversation intelligence. A realtime AI participant that joins human conversations and turns them into structured evidence.
 
@@ -69,8 +69,8 @@ Open [http://localhost:3001](http://localhost:3001).
 
 Seeded local login:
 
-- email: `founder@aperture.local`
-- password: `aperture-dev`
+- email: `founder@kimma.local`
+- password: `kimma-dev`
 
 ### 4. Create a conversation and start a call
 
@@ -86,7 +86,7 @@ All keys stay on the server or the agent host. See `.env.example`. Never put `OP
 
 ```bash
 pnpm test
-pnpm --filter @aperture/conversation test
+pnpm --filter @kimma/conversation test
 ```
 
 Conversation-behavior evals live in `/evals` (verbose participant, barge-in, contradictions, pauses, etc.). They score turn-taking, memory, follow-ups, objective completion, hallucinations, and latency — without requiring a live microphone.

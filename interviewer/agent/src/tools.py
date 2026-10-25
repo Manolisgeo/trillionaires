@@ -18,7 +18,7 @@ from browser import AgentBrowser
 from deskcache import DeskCache
 from state import InterviewState
 
-log = logging.getLogger("aperture.tools")
+log = logging.getLogger("kimma.tools")
 SHAPE_KINDS = {"rect", "ellipse", "text", "arrow"}
 ALWAYS_ALLOWED = ("github.com", "gist.github.com")
 

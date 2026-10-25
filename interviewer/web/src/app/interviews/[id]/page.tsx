@@ -67,7 +67,7 @@ export default async function InterviewPage({ params }: { params: Promise<{ id: 
         <Stamp variant={interview.status === "failed" ? "neutral" : "ai"} rotate={-1.5}>
           {interviewStatusLabel[interview.status]}
         </Stamp>
-        <MonoReadout tone="muted">{interview.mode === "meet" ? "Google Meet" : "Aperture room"}</MonoReadout>
+        <MonoReadout tone="muted">{interview.mode === "meet" ? "Google Meet" : "Kimma room"}</MonoReadout>
         <MonoReadout tone="muted">Prepared {formatDateTime(interview.createdAt)}</MonoReadout>
         {demo ? <DemoLabel /> : null}
       </div>
@@ -79,7 +79,7 @@ export default async function InterviewPage({ params }: { params: Promise<{ id: 
       <section aria-label="Brief" className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
           <SeriesHeading>BRIEF · THE RECORD AGAINST THE RUBRIC</SeriesHeading>
-          <p className="m-0 max-w-[65ch] text-sm text-muted">What Aperture found before the call. Every item cites its source; the interview checks them with the candidate.</p>
+          <p className="m-0 max-w-[65ch] text-sm text-muted">What Kimma found before the call. Every item cites its source; the interview checks them with the candidate.</p>
         </div>
         {BUCKETS.map((b) => {
           const items = interview.brief.items.filter((i) => i.bucket === b.key);

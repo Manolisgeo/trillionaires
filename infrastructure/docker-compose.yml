@@ -2,15 +2,15 @@ services:
   postgres:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: aperture
-      POSTGRES_PASSWORD: aperture
-      POSTGRES_DB: aperture
+      POSTGRES_USER: kimma
+      POSTGRES_PASSWORD: kimma
+      POSTGRES_DB: kimma
     ports:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U aperture"]
+      test: ["CMD-SHELL", "pg_isready -U kimma"]
       interval: 5s
       timeout: 5s
       retries: 10

@@ -15,8 +15,8 @@ const mono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aperture",
-    template: "%s · Aperture",
+    default: "Kimma.ai",
+    template: "%s · Kimma.ai",
   },
   description:
     "Conversation intelligence. A realtime AI participant that turns human conversations into structured evidence.",

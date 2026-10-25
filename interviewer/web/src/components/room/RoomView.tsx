@@ -54,7 +54,7 @@ export function RoomHeader({ data, desk, recording, extra }: { data: RoomData; d
   return (
     <header className="flex min-h-14 flex-wrap items-center gap-x-6 gap-y-0 bg-hollinger px-4 text-white sm:px-7">
       <div className="flex flex-wrap items-baseline gap-x-3.5 gap-y-0 py-2 sm:flex-1 sm:basis-80">
-        <span className="text-sm font-bold tracking-[0.14em]">APERTURE</span>
+        <span className="text-sm font-bold tracking-[0.14em]">KIMMA.AI</span>
         <span className="font-mono text-sm text-rule-strong">
           {data.callNo} · {data.role.title} · {data.role.company}
         </span>
@@ -66,7 +66,7 @@ export function RoomHeader({ data, desk, recording, extra }: { data: RoomData; d
             {clock ? <span className="ml-3">{mmss(clock.elapsed)} / {mmss(clock.total)}</span> : null}
           </>
         ) : (
-          <span className="text-chrome-link">WAITING FOR APERTURE</span>
+          <span className="text-chrome-link">WAITING FOR KIMMA</span>
         )}
       </div>
       <div className="flex items-center justify-end gap-2.5 py-1.5 sm:flex-1 sm:basis-80">
@@ -154,7 +154,7 @@ export function RoomView(p: RoomViewProps) {
                   <span className="shrink-0 font-mono text-xs tracking-[0.12em] text-muted">CAPTIONS</span>
                   {last ? (
                     <span className="line-clamp-2 min-w-0">
-                      <b className={last.who === "agent" ? "text-stamp" : ""}>{last.who === "agent" ? "APERTURE" : "YOU"}</b> {last.text}
+                      <b className={last.who === "agent" ? "text-stamp" : ""}>{last.who === "agent" ? "KIMMA" : "YOU"}</b> {last.text}
                     </span>
                   ) : (
                     <span className="text-muted">Words appear here as they are spoken.</span>

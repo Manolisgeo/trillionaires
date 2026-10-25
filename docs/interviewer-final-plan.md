@@ -1,4 +1,4 @@
-# Aperture AI Interviewer — Final Plan (start here)
+# Kimma.ai AI Interviewer — Final Plan (start here)
 
 Simple, self-contained. If you read only one doc, read this. Deeper detail + sources are in
 [interviewer-stack-decision.md](./interviewer-stack-decision.md). Decisions still open are listed

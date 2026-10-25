@@ -4,7 +4,7 @@ import RoomEntry from "@/components/room/RoomEntry";
 import { loadRoomData } from "../_data";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Interview room · Aperture", robots: { index: false } };
+export const metadata: Metadata = { title: "Interview room · Kimma", robots: { index: false } };
 
 export default async function RoomPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const { id } = await params;

@@ -7,7 +7,7 @@ import { ReportView } from "@/components/report/ReportView";
 import { store } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Finding aid · Aperture" };
+export const metadata: Metadata = { title: "Finding aid · Kimma" };
 
 export default async function ReportPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

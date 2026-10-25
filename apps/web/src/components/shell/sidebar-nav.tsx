@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@aperture/ui";
+import { cn } from "@kimma/ui";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

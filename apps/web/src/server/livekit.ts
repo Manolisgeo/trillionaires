@@ -18,7 +18,7 @@ export function livekitEnv() {
     url: process.env.LIVEKIT_URL ?? "ws://localhost:7880",
     apiKey: process.env.LIVEKIT_API_KEY ?? "devkey",
     apiSecret: process.env.LIVEKIT_API_SECRET ?? "secret",
-    agentName: process.env.LIVEKIT_AGENT_NAME ?? "aperture-conversation-agent",
+    agentName: process.env.LIVEKIT_AGENT_NAME ?? "kimma-conversation-agent",
   };
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "@aperture/ai",
+  "name": "@kimma/ai",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -11,7 +11,7 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@aperture/types": "workspace:*",
+    "@kimma/types": "workspace:*",
     "openai": "^4.104.0"
   },
   "devDependencies": {

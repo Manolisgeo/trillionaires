@@ -73,7 +73,7 @@ export function ReviewRecord({ initial, roleTitle, company }: { initial: Candida
         <div className="flex max-w-[64ch] flex-col gap-2.5">
           <h1 className="m-0 text-balance text-[30px] leading-[38px] font-bold">This is everything the interviewer will ask about.</h1>
           <p className="m-0 text-base leading-[25px] text-ink-2">
-            Aperture read only the documents and links you gave us. Each item shows where it came from. Remove or correct anything that&apos;s wrong; nothing here is a score.
+            Kimma read only the documents and links you gave us. Each item shows where it came from. Remove or correct anything that&apos;s wrong; nothing here is a score.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export function ReviewRecord({ initial, roleTitle, company }: { initial: Candida
 
         <section aria-labelledby="next-h" className={card}>
           <SeriesHeading as="h2" className="text-xs"><span id="next-h">The interview</span></SeriesHeading>
-          <span>About 40 minutes with Aperture, an AI interviewer, for the {roleTitle} role. It is recorded, captioned, and reviewed by a person at {company}, who makes the decision.</span>
+          <span>About 40 minutes with Kimma, an AI interviewer, for the {roleTitle} role. It is recorded, captioned, and reviewed by a person at {company}, who makes the decision.</span>
           <span>You can say &quot;I&apos;m finished&quot; or press a button when you&apos;re done answering, and ask for extra think time.</span>
         </section>
 

@@ -2,7 +2,7 @@ import { createInitialState } from "./state";
 import { detectContradictions } from "./intelligence";
 import { questionsCoveredByUtterance, selectNextAction } from "./strategy";
 import { scoreSegment } from "./importance";
-import type { ConversationState, Question } from "@aperture/types";
+import type { ConversationState, Question } from "@kimma/types";
 import { describe, expect, it } from "vitest";
 
 function sampleState(overrides: Partial<ConversationState> = {}): ConversationState {
@@ -29,7 +29,7 @@ function sampleState(overrides: Partial<ConversationState> = {}): ConversationSt
     ],
     participants: [
       { id: "human", displayName: "Alex", role: "PARTICIPANT", isAgent: false },
-      { id: "agent", displayName: "Aperture", role: "AI_AGENT", isAgent: true },
+      { id: "agent", displayName: "Kimma", role: "AI_AGENT", isAgent: true },
     ],
   });
   return { ...base, ...overrides };

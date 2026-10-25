@@ -1,4 +1,4 @@
-import type { StructuredReport } from "@aperture/types";
+import type { StructuredReport } from "@kimma/types";
 
 export const ANALYSIS_SYSTEM_PROMPT = `You are a conversation intelligence analyst.
 

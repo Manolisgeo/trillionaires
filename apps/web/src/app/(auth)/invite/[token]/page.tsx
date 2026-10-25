@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { AcceptInviteForm } from "./accept-form";
 import { AuthFrame } from "@/components/auth/auth-frame";
 import Link from "next/link";

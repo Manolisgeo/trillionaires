@@ -40,7 +40,7 @@ export function RoomFooter({ micEnabled, onToggleMic, onFinished, onRequestHuman
         <div role="group" aria-label={human ? "Confirm request for a human interviewer" : "Confirm leaving the interview"} className="flex flex-wrap items-center gap-3">
           <p className="m-0 max-w-[62ch] text-[15px] leading-6">
             {human
-              ? "Ask for a person to take over? Aperture will note your request and offer to end the call. A person at the company will see it."
+              ? "Ask for a person to take over? Kimma will note your request and offer to end the call. A person at the company will see it."
               : "Leave the interview? The recording up to now is saved and sent. You can come back with the same link."}
           </p>
           <Button
@@ -75,7 +75,7 @@ export function RoomFooter({ micEnabled, onToggleMic, onFinished, onRequestHuman
         </Button>
       )}
       <span role="status" className="font-mono text-[13px] text-stamp max-sm:hidden">
-        {sent ? "Aperture knows you are finished." : ""}
+        {sent ? "Kimma knows you are finished." : ""}
       </span>
       <span className="flex-1 basis-6 max-sm:hidden" />
       {note}
@@ -135,7 +135,7 @@ export function RoomFooter({ micEnabled, onToggleMic, onFinished, onRequestHuman
       </div>
       {sent ? (
         <span role="status" className="w-full font-mono text-[13px] text-stamp sm:hidden">
-          Aperture knows you are finished.
+          Kimma knows you are finished.
         </span>
       ) : null}
     </footer>

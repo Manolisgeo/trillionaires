@@ -165,12 +165,12 @@ export default function CvViewer({ url, highlight, tag, maxPageWidth = 640, onMa
       <div ref={content} className="relative mx-auto flex flex-col items-center py-6 pr-3 pl-20 sm:py-9 sm:pr-6" style={{ minWidth: narrow ? pageWidth + MARGIN_W + 12 : 0 }}>
         {missing ? (
           <p role="status" className="mb-4 w-full max-w-[640px] border border-dashed border-rule-strong px-3 py-2 font-mono text-[13px] text-ink-2">
-            Aperture is asking about a line this page view could not locate. The question card above names it.
+            Kimma is asking about a line this page view could not locate. The question card above names it.
           </p>
         ) : null}
         {loadError ? (
           <ErrorNote title="The CV could not be opened" action={<a href={url} target="_blank" rel="noreferrer noopener">Open the PDF in a new tab</a>}>
-            {loadError} Aperture can still ask about it; read the question card.
+            {loadError} Kimma can still ask about it; read the question card.
           </ErrorNote>
         ) : (
           <Document

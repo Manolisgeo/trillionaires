@@ -1,5 +1,5 @@
-import { prisma } from "@aperture/database";
-import { draftScorecard, matchTrackers, type DraftRating } from "@aperture/conversation";
+import { prisma } from "@kimma/database";
+import { draftScorecard, matchTrackers, type DraftRating } from "@kimma/conversation";
 
 function evidenceBundle(draft: DraftRating) {
   return {
@@ -51,7 +51,7 @@ export async function refreshScorecard(conversationId: string) {
   if (!conversation) return;
 
   const lines = (conversation.transcript?.segments ?? [])
-    .filter((segment) => segment.isFinal && segment.speakerName !== "Aperture")
+    .filter((segment) => segment.isFinal && segment.speakerName !== "Kimma")
     .map((segment) => ({
       speakerName: segment.speakerName,
       text: segment.text,

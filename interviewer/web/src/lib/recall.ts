@@ -43,7 +43,7 @@ export async function createBot(o: { meetingUrl: string; botPageUrl: string; int
     method: "POST",
     body: JSON.stringify({
       meeting_url: o.meetingUrl,
-      bot_name: "Aperture (AI interviewer)",
+      bot_name: "Kimma (AI interviewer)",
       output_media: { camera: { kind: "webpage", config: { url: o.botPageUrl } } },
       variant: { google_meet: "web_4_core", zoom: "web_4_core", microsoft_teams: "web_4_core" },
       recording_config: { video_mixed_mp4: {}, retention: { type: "timed", hours: 168 } },

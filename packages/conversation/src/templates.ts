@@ -1,4 +1,4 @@
-import type { ConversationType, Question } from "@aperture/types";
+import type { ConversationType, Question } from "@kimma/types";
 
 export interface ConversationTemplateDefinition {
   type: ConversationType;

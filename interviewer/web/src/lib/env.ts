@@ -7,7 +7,7 @@ const schema = z.object({
   LIVEKIT_URL: z.string().optional(),
   LIVEKIT_API_KEY: z.string().optional(),
   LIVEKIT_API_SECRET: z.string().optional(),
-  LIVEKIT_AGENT_NAME: z.string().default("aperture-interviewer"),
+  LIVEKIT_AGENT_NAME: z.string().default("kimma-interviewer"),
   ANTHROPIC_API_KEY: z.string().optional(),
   PREP_MODEL: z.string().default("claude-sonnet-5-5"),
   SCORER_MODEL: z.string().default("claude-opus-5-5"),

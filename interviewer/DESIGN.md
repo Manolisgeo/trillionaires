@@ -1,5 +1,5 @@
 ---
-name: Aperture
+name: Kimma.ai
 description: An archival reading room for AI interviews; every claim catalogued, every rating traced to a quote and a timecode.
 colors:
   hollinger: "#2f3b45"
@@ -138,13 +138,13 @@ components:
     padding: "0 28px"
 ---
 
-# Design System: Aperture
+# Design System: Kimma.ai
 
 ## Overview
 
 **Creative North Star: "The Reading Room"**
 
-Aperture treats a candidate's background the way an archive treats a record. The surface is a cool, acid-free board (#f4f5f2, never cream) under a Hollinger blue-grey chrome bar; documents are white catalog cards with a red top rule; everything the AI marks is stamped in violet ink. The materials are the archive's own: stamps, slip markers, folder tabs, finding-aid outlines, typewriter readouts. The product refuses the AI-dashboard default (no glowing orb, no gradients, no score rings) and reads as a calm, precise place where a person can check the work.
+Kimma.ai treats a candidate's background the way an archive treats a record. The surface is a cool, acid-free board (#f4f5f2, never cream) under a Hollinger blue-grey chrome bar; documents are white catalog cards with a red top rule; everything the AI marks is stamped in violet ink. The materials are the archive's own: stamps, slip markers, folder tabs, finding-aid outlines, typewriter readouts. The product refuses the AI-dashboard default (no glowing orb, no gradients, no score rings) and reads as a calm, precise place where a person can check the work.
 
 Density is document-first. Exactly one document owns the desk at a time (a CV, a report, a ledger); folder tabs swap it hard, never tile it. Dense surfaces (transcript, ledger, evidence) keep one text size and get rank from weight, case, reversal and rule. The 24px card rule is the layout armature: ruled cards put every text row on a 24px baseline, and spacing moves in 12/24 steps.
 
@@ -240,7 +240,7 @@ Hard-swap tablist (arrow, Home, End keys). Selected tab is white with a semibold
 Label above (14px, 600), optional hint (13px muted), control 44px (15px text, white, rule-strong border, 6px radius), inline error in error-ink 600 with an error-ink border. File input is dashed. Checkboxes are 20px with a 24px-line label and violet accent.
 
 ### Header and Navigation
-56px Hollinger bar: APERTURE wordmark (700, +0.14em), nav at 14px in chrome-link with the current item white, semibold and underlined by an inset 2px white rule; mono call-number title in rule-strong; centered phase clock and right-hand readouts in the room. Focus rings turn white on the bar.
+56px Hollinger bar: KIMMA wordmark (700, +0.14em), nav at 14px in chrome-link with the current item white, semibold and underlined by an inset 2px white rule; mono call-number title in rule-strong; centered phase clock and right-hand readouts in the room. Focus rings turn white on the bar.
 
 ### Finding Aid (Phase Outline)
 Numbered phase list: done muted, current bold with its questions beneath a 1px left rule, the current question reversed white on ink, upcoming with minutes in mono at right.

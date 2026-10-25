@@ -22,7 +22,7 @@ TypeScript, Tailwind 4) for the web app and a Python LiveKit Agents worker for t
 
 ## Product Purpose
 
-Aperture is an AI interviewer. Before the call it researches the candidate's background (CV, LinkedIn export, GitHub,
+Kimma.ai is an AI interviewer. Before the call it researches the candidate's background (CV, LinkedIn export, GitHub,
 own site) against the role's requirements and drafts a personalized interview plan. During the call it talks naturally
 and shows its own screen: it opens the CV and highlights the line it's asking about, opens their GitHub, and shares a
 whiteboard where both sides write and draw. Afterward it produces a structured report where every rating cites a
@@ -33,14 +33,14 @@ work fairly.
 
 ## Positioning
 
-Competitors interview from a generic script and return a score. Aperture interviews **about this candidate's actual
+Competitors interview from a generic script and return a score. Kimma.ai interviews **about this candidate's actual
 background against this role's actual bar**: it points at the exact CV line or repo it's asking about, and every
 judgment links back to the moment in the recording that supports it. Same core questions for every candidate (fair,
 comparable), with personalized probes. The AI suggests "Advance" or "Needs human review", never "Reject".
 
 ## Operating Context
 
-- Interview runs in Aperture's own browser call (LiveKit) or inside the candidate's Google Meet/Zoom via a meeting bot
+- Interview runs in Kimma.ai's own browser call (LiveKit) or inside the candidate's Google Meet/Zoom via a meeting bot
   (Recall.ai) that screen-shares the agent's view.
 - Phases: intro and consent → behavioral (STAR questions, follow-ups) → CV/background deep-dive → technical/niche
   questions on a shared whiteboard (no code execution) → candidate questions and close.
@@ -60,7 +60,7 @@ comparable), with personalized probes. The AI suggests "Advance" or "Needs human
 
 ## Brand Commitments
 
-- Working name **Aperture**. No logo, palette, or typeface committed.
+- Name: **Kimma.ai**. No logo, palette, or typeface committed.
 - Voice: plain, calm, precise; the AI speaks in short plain sentences and never pretends to be human.
 
 ## Evidence on Hand

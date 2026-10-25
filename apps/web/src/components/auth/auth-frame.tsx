@@ -16,7 +16,7 @@ export function AuthFrame({
           <span className="flex h-7 w-7 items-center justify-center rounded-md border border-paper/20">
             <span className="h-3 w-3 rounded-full border border-paper" />
           </span>
-          <span className="text-sm font-medium">Aperture</span>
+          <span className="text-sm font-medium">Kimma</span>
         </div>
         <div>
           <p className="max-w-sm text-2xl font-medium leading-snug tracking-tight">{quote}</p>

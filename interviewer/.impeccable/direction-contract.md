@@ -2,7 +2,7 @@
 
 Emit this verbatim as an HTML comment at the top of the root layout's `<body>` (see SPEC-UI).
 
-THESIS: Aperture treats a candidate's background the way an archive treats a record: every claim catalogued with its provenance, every judgment cross-referenced to the moment it was said. It refuses the category default of an AI dashboard with a glowing orb.
+THESIS: Kimma.ai treats a candidate's background the way an archive treats a record: every claim catalogued with its provenance, every judgment cross-referenced to the moment it was said. It refuses the category default of an AI dashboard with a glowing orb.
 
 OWN-WORLD: Hollinger blue-grey chrome #2F3B45, cool acid-free board #F4F5F2 (never cream), white catalog cards with a red top rule #C23B2E (red also and only = recording), violet stamp ink #5A4AA8 for everything the AI marks. Type: Public Sans, plus Courier Prime for call numbers and timecodes. Materials: stamps, slip markers, folder tabs, finding-aid outlines.
 
@@ -16,7 +16,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 ## Raises (from declined challengers)
 - Crouwel: the card-rule unit (24px) is the layout armature; spacing is in 12/24 steps.
-- Saville: every role, candidate, interview, claim, quote and rating carries a call number (R-014, C-0388, AP-2026.0142, C-01, Q2.3, T-118).
+- Saville: every role, candidate, interview, claim, quote and rating carries a call number (R-014, C-0388, KM-2026.0142, C-01, Q2.3, T-118).
 - Timetable: dense surfaces (transcript, report series, ledger, catalog) use ONE text size (14px); rank comes from weight, case, reversal and rule.
 - Feed: exactly one document owns the desk at a time; folder tabs hard-swap it, never tile.
 - Specimen: live typewriter readouts (timecode, phase clock, page:line) are the only chrome that moves.

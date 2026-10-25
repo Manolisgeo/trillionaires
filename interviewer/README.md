@@ -1,4 +1,4 @@
-# Aperture Interviewer
+# Kimma.ai Interviewer
 
 An AI voice interviewer demo. A recruiter drafts a role rubric from a job description, a candidate applies and reviews
 what was gathered about them, then has a live voice interview (in the browser or inside Google Meet). The agent shows

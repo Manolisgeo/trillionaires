@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import Link from "next/link";
 import { StatusBadge } from "@/components/ui/badge";

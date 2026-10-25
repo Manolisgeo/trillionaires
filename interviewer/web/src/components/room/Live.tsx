@@ -57,7 +57,7 @@ function CandidateRoom({ data, joinedAt, onDone }: { data: RoomData; joinedAt: n
   const startRef = useLatest(startedAt ?? joinedAt);
   const integrity = useIntegrity(data.interviewId, () => (Date.now() - startRef.current) / 1000, true);
   const worksheet = useRef<WorksheetHandle>(null);
-  const [captions, setCaptions] = useStoredFlag("aperture.captions", true);
+  const [captions, setCaptions] = useStoredFlag("kimma.captions", true);
   const [humanRequested, setHumanRequested] = useState(false);
   const [leaving, setLeaving] = useState(false);
   const [deviceFail, setDeviceFail] = useState<string | null>(null);
@@ -132,7 +132,7 @@ function CandidateRoom({ data, joinedAt, onDone }: { data: RoomData; joinedAt: n
       }
       notice={
         <>
-          <StartAudio label="Turn on Aperture's voice" className="min-h-12 w-fit cursor-pointer rounded-md border border-ink bg-ink px-5 text-[15px] font-semibold text-white" />
+          <StartAudio label="Turn on Kimma's voice" className="min-h-12 w-fit cursor-pointer rounded-md border border-ink bg-ink px-5 text-[15px] font-semibold text-white" />
           {deviceFail ? (
             <ErrorNote title="Your microphone has a problem">{deviceFail} Check the browser&apos;s microphone setting, then unmute with the button below.</ErrorNote>
           ) : null}
@@ -157,7 +157,7 @@ function BoardRoom({ data, joinedAt }: { data: RoomData; joinedAt: number }) {
         <Desk data={data} desk={desk} tag={null} channel={channel} adds={desk.boardAdds} applyAdds uploadFor={data.interviewId} onPaste={integrity.paste} only="board" />
       </main>
       <footer className="border-t border-rule bg-card px-4 py-3 sm:px-7">
-        <p className="m-0 font-mono text-[13px] text-muted">Shared worksheet for your Google Meet interview. Aperture is in the call, an AI interviewer that cannot make the decision.</p>
+        <p className="m-0 font-mono text-[13px] text-muted">Shared worksheet for your Google Meet interview. Kimma is in the call, an AI interviewer that cannot make the decision.</p>
       </footer>
     </div>
   );

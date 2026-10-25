@@ -29,7 +29,7 @@ class Settings:
     tts_provider: str = "cartesia"
     deepgram_model: str = "nova-3"
     realtime_model: str = "gpt-realtime"
-    agent_name: str = "aperture-interviewer"
+    agent_name: str = "kimma-interviewer"
     base_url: str = "http://localhost:3000"
     internal_secret: str = ""
     cartesia_voice_id: str = ""
@@ -62,7 +62,7 @@ def load_settings(env: dict[str, str] | None = None) -> Settings:
         tts_provider=g("TTS_PROVIDER", "cartesia").lower(),
         deepgram_model=g("DEEPGRAM_MODEL", "nova-3"),
         realtime_model=g("OPENAI_REALTIME_MODEL", "gpt-realtime"),
-        agent_name=g("LIVEKIT_AGENT_NAME", "aperture-interviewer"),
+        agent_name=g("LIVEKIT_AGENT_NAME", "kimma-interviewer"),
         base_url=g("PUBLIC_BASE_URL", "http://localhost:3000").rstrip("/"),
         internal_secret=g("AGENT_INTERNAL_SECRET"),
         cartesia_voice_id=g("CARTESIA_VOICE_ID"),

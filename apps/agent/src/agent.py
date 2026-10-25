@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from backend import BackendClient
 from instructions import build_instructions
 
-logger = logging.getLogger("aperture-agent")
+logger = logging.getLogger("kimma-agent")
 load_dotenv(".env")
 load_dotenv("../../.env")
 
@@ -132,8 +132,8 @@ class ConversationAgent(Agent):
 server = AgentServer()
 
 
-@server.rtc_session(agent_name=os.getenv("LIVEKIT_AGENT_NAME", "aperture-conversation-agent"))
-async def aperture_conversation_agent(ctx: JobContext) -> None:
+@server.rtc_session(agent_name=os.getenv("LIVEKIT_AGENT_NAME", "kimma-conversation-agent"))
+async def kimma_conversation_agent(ctx: JobContext) -> None:
     conversation_id = _conversation_id(ctx)
     ctx.log_context_fields = {"conversationId": conversation_id, "room": ctx.room.name}
     backend = BackendClient(conversation_id)

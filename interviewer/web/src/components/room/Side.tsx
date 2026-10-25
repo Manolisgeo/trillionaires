@@ -8,12 +8,12 @@ import { phaseClock, resolveQuestion, type DeskState } from "./deskState";
 import { PHASE_TITLE, type AiState, type RoomData, type TranscriptLine } from "./types";
 
 const STATE_COPY: Record<AiState, { title: string; stamp: string; label: string }> = {
-  connecting: { title: "Aperture is joining", stamp: "JOINING", label: "Aperture, the AI interviewer, is joining" },
-  failed: { title: "Aperture could not join", stamp: "OFFLINE", label: "Aperture, the AI interviewer, could not join" },
-  idle: { title: "Aperture is here", stamp: "READY", label: "Aperture, the AI interviewer, is ready" },
-  listening: { title: "Aperture is listening", stamp: "LISTENING", label: "Aperture, the AI interviewer, is listening" },
-  thinking: { title: "Aperture is thinking", stamp: "THINKING", label: "Aperture, the AI interviewer, is thinking" },
-  speaking: { title: "Aperture is speaking", stamp: "SPEAKING", label: "Aperture, the AI interviewer, is speaking" },
+  connecting: { title: "Kimma is joining", stamp: "JOINING", label: "Kimma, the AI interviewer, is joining" },
+  failed: { title: "Kimma could not join", stamp: "OFFLINE", label: "Kimma, the AI interviewer, could not join" },
+  idle: { title: "Kimma is here", stamp: "READY", label: "Kimma, the AI interviewer, is ready" },
+  listening: { title: "Kimma is listening", stamp: "LISTENING", label: "Kimma, the AI interviewer, is listening" },
+  thinking: { title: "Kimma is thinking", stamp: "THINKING", label: "Kimma, the AI interviewer, is thinking" },
+  speaking: { title: "Kimma is speaking", stamp: "SPEAKING", label: "Kimma, the AI interviewer, is speaking" },
 };
 
 /** The violet stamp mark. State changes land like a stamp press; the mark itself never animates otherwise. */
@@ -98,7 +98,7 @@ export function Transcript({ lines, className = "" }: { lines: TranscriptLine[];
                 className={current ? "bg-stamp-tint px-2.5 py-1.5" : interim ? "text-muted" : undefined}
               >
                 <span className="font-mono text-muted">{mmss(l.at)}</span>{" "}
-                <b className={`tracking-[0.04em] ${l.who === "agent" ? "text-stamp" : ""}`}>{l.who === "agent" ? "APERTURE" : "YOU"}</b>{" "}
+                <b className={`tracking-[0.04em] ${l.who === "agent" ? "text-stamp" : ""}`}>{l.who === "agent" ? "KIMMA" : "YOU"}</b>{" "}
                 <span>{l.text}</span>
               </div>
             );

@@ -1,7 +1,7 @@
 [project]
-name = "aperture-agent"
+name = "kimma-agent"
 version = "0.1.0"
-description = "Realtime AI conversation participant for Aperture"
+description = "Realtime AI conversation participant for Kimma"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

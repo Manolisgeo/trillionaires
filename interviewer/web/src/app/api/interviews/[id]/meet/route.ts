@@ -21,7 +21,7 @@ export const POST = route(async (req, { params }: Ctx) => {
       meetingUrl: meetUrl,
       botPageUrl: `${base}/bot/${id}`,
       interviewId: id,
-      joinMessage: `Hi, I'm Aperture, an AI interviewer. This call is recorded. Open the shared whiteboard: ${base}/room/${id}?view=board`,
+      joinMessage: `Hi, I'm Kimma, an AI interviewer. This call is recorded. Open the shared whiteboard: ${base}/room/${id}?view=board`,
     });
   } catch (e) {
     throw new HttpError(502, e instanceof Error ? e.message : "Recall request failed");

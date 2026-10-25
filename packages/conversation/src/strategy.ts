@@ -2,7 +2,7 @@ import type {
   ConversationState,
   NextAction,
   Question,
-} from "@aperture/types";
+} from "@kimma/types";
 import { lastHumanUtterance } from "./state";
 
 const VAGUE_RE =

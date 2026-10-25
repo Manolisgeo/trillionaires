@@ -16,7 +16,7 @@ export function Completion({ data, reason, recording, onRejoin }: { data: RoomDa
         : "The connection dropped.";
   const body =
     reason === "ended" || reason === "closed"
-      ? `Aperture is an AI and does not decide anything. The recording and transcript go to a person at ${data.role.company}, who reads the report and chooses what happens next.`
+      ? `Kimma is an AI and does not decide anything. The recording and transcript go to a person at ${data.role.company}, who reads the report and chooses what happens next.`
       : reason === "left"
         ? `What was said so far is saved and goes to a person at ${data.role.company}. You can come back with the same link and carry on.`
         : `What was said so far is saved. Rejoin with the same link to carry on, or close this page if you are done.`;
@@ -31,7 +31,7 @@ export function Completion({ data, reason, recording, onRejoin }: { data: RoomDa
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="flex min-h-14 flex-wrap items-center gap-x-3.5 bg-hollinger px-4 py-2 text-white sm:px-7">
-        <span className="text-sm font-bold tracking-[0.14em]">APERTURE</span>
+        <span className="text-sm font-bold tracking-[0.14em]">KIMMA.AI</span>
         <span className="font-mono text-sm text-rule-strong">
           {data.callNo} · {data.role.title} · {data.role.company}
         </span>

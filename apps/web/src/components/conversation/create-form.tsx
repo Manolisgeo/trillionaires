@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { builtinTemplates } from "@aperture/conversation";
-import type { ConversationType } from "@aperture/types";
+import { builtinTemplates } from "@kimma/conversation";
+import type { ConversationType } from "@kimma/types";
 import { createConversationAction } from "@/actions/conversation";
 import { Button } from "@/components/ui/button";
 import { Field, Input, Textarea } from "@/components/ui/field";
-import { cn } from "@aperture/ui";
+import { cn } from "@kimma/ui";
 
 const types: ConversationType[] = [
   "INTERVIEW",

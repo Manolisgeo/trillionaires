@@ -1,4 +1,4 @@
-"""Aperture interviewer voice agent (livekit-agents 1.8)."""
+"""Kimma interviewer voice agent (livekit-agents 1.8)."""
 from __future__ import annotations
 
 import asyncio
@@ -25,7 +25,7 @@ from prompts import base_instructions, build_phase_instructions, opening_line  #
 from state import InterviewState  # noqa: E402
 from tools import Desk, Runtime, build_tools, link_domains  # noqa: E402
 
-log = logging.getLogger("aperture.agent")
+log = logging.getLogger("kimma.agent")
 SETTINGS = load_settings()
 LATE_JOIN_DELAY_S = 1.0
 server = AgentServer(setup_fnc=lambda proc: proc.userdata.__setitem__("vad", silero.VAD.load()))

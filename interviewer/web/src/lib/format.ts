@@ -17,13 +17,13 @@ function hash(id: string): number {
   return h >>> 0;
 }
 
-/** Stable call numbers derived from ids, e.g. R-014, C-0388, AP-2026.0142. */
+/** Stable call numbers derived from ids, e.g. R-014, C-0388, KM-2026.0142. */
 export const callNo = {
   role: (id: string) => `R-${String(hash(id) % 1000).padStart(3, "0")}`,
   candidate: (id: string) => `C-${String(hash(id) % 10000).padStart(4, "0")}`,
   interview: (id: string, createdAt?: string) => {
     const year = createdAt ? new Date(createdAt).getUTCFullYear() : new Date().getUTCFullYear();
-    return `AP-${year}.${String(hash(id) % 10000).padStart(4, "0")}`;
+    return `KM-${year}.${String(hash(id) % 10000).padStart(4, "0")}`;
   },
   /** Question call tag, e.g. Q2.3 from phase index (1-based) and question index (1-based). */
   question: (phaseIndex: number, n: number) => `Q${phaseIndex}.${n}`,

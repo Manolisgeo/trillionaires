@@ -5,7 +5,7 @@ export async function registerNode() {
   loadEnv({ path: resolve(process.cwd(), ".env") });
   loadEnv({ path: resolve(process.cwd(), "../../.env") });
 
-  const { getServerEnv } = await import("@aperture/config");
+  const { getServerEnv } = await import("@kimma/config");
   getServerEnv();
 
   try {

@@ -1,6 +1,6 @@
 /* Room-only styles: PDF text layer highlights, Excalidraw chrome restyled into The Reading Room, readout details. */
 
-/* The line Aperture is asking about: violet wash + 2px underline, drawn over the transparent text layer. */
+/* The line Kimma is asking about: violet wash + 2px underline, drawn over the transparent text layer. */
 .room-cv .textLayer mark.slip-mark {
   background: var(--color-stamp-wash);
   box-shadow: inset 0 -2px 0 var(--color-stamp);

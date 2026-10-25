@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import { PageHeader } from "@/components/shell/page-header";
 import { EmptyState } from "@/components/shell/empty-state";
@@ -43,7 +43,7 @@ export default async function PeoplePage() {
     <div className="mx-auto max-w-5xl">
       <PageHeader
         title="People"
-        description="People accumulate claims across conversations. Aperture records what was said. It does not decide who to hire."
+        description="People accumulate claims across conversations. Kimma records what was said. It does not decide who to hire."
       />
       {people.length === 0 && guestGroups.size === 0 ? (
         <div className="mt-10">

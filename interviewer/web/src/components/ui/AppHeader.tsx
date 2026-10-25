@@ -26,7 +26,7 @@ export function AppHeader({
     <header className={cx("flex min-h-14 flex-wrap items-center gap-x-6 gap-y-0 bg-hollinger px-4 text-white sm:px-7", className)}>
       <div className="flex flex-wrap items-baseline gap-x-6 gap-y-0 sm:flex-1 sm:basis-80">
         <Link href="/" className="inline-flex min-h-11 items-center text-sm font-bold tracking-[0.14em] text-white no-underline hover:text-white">
-          APERTURE
+          KIMMA.AI
         </Link>
         {nav}
         {title ? <span className="font-mono text-sm text-rule-strong">{title}</span> : null}

@@ -16,7 +16,7 @@ export default function SignupPage() {
       detail="Conversations never cross tenants. Humans keep the irreversible decisions."
       footer="Consent, retention, and deletion are organization controls."
     >
-      <p className="text-sm font-medium tracking-tight lg:hidden">Aperture</p>
+      <p className="text-sm font-medium tracking-tight lg:hidden">Kimma</p>
       <h1 className="text-3xl font-medium tracking-tight">Create an organization</h1>
       <p className="mt-2 text-sm text-muted">Your conversations stay inside this workspace.</p>
       <form action={action} className="mt-8 space-y-4">

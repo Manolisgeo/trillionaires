@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-10-25T13:17:08.450965+00:00",
-  "title": "Design System: Aperture",
+  "title": "Design System: Kimma.ai",
   "extensions": {
     "colorMeta": {
       "hollinger": {
@@ -266,13 +266,13 @@
       "kind": "nav",
       "refersTo": "app-header",
       "description": "Blue-grey bar with wordmark, nav and mono title.",
-      "html": "<header class=\"ds-hdr\"><b>APERTURE</b><a class=\"cur\">Roles</a><a>Interviews</a><span>R-014</span></header>",
+      "html": "<header class=\"ds-hdr\"><b>KIMMA</b><a class=\"cur\">Roles</a><a>Interviews</a><span>R-014</span></header>",
       "css": ".ds-hdr{display:flex;align-items:center;gap:24px;min-height:56px;padding:0 28px;background:#2f3b45;color:#fff;font:14px 'Public Sans',system-ui,sans-serif} .ds-hdr b{letter-spacing:.14em} .ds-hdr a{color:#c9d2d7;display:inline-flex;align-items:center;min-height:56px} .ds-hdr a.cur{color:#fff;font-weight:600;box-shadow:inset 0 -2px 0 #fff} .ds-hdr span{font-family:'Courier Prime',ui-monospace,monospace;color:#a9b6bd}"
     }
   ],
   "narrative": {
     "northStar": "The Reading Room",
-    "overview": "Aperture treats a candidate's background the way an archive treats a record. The surface is a cool, acid-free board (#f4f5f2, never cream) under a Hollinger blue-grey chrome bar; documents are white catalog cards with a red top rule; everything the AI marks is stamped in violet ink. The materials are the archive's own: stamps, slip markers, folder tabs, finding-aid outlines, typewriter readouts. The product refuses the AI-dashboard default (no glowing orb, no gradients, no score rings) and reads as a calm, precise place where a person can check the work.\n\nDensity is document-first. Exactly one document owns the desk at a time (a CV, a report, a ledger); folder tabs swap it hard, never tile it. Dense surfaces (transcript, ledger, evidence) keep one text size and get rank from weight, case, reversal and rule. The 24px card rule is the layout armature: ruled cards put every text row on a 24px baseline, and spacing moves in 12/24 steps.\n\nColor is spent by meaning. Violet means the AI marked this. Red means a recording, and also the top rule of every catalog card. Ink buttons carry the one primary action per view. Nothing else is chromatic.",
+    "overview": "Kimma.ai treats a candidate's background the way an archive treats a record. The surface is a cool, acid-free board (#f4f5f2, never cream) under a Hollinger blue-grey chrome bar; documents are white catalog cards with a red top rule; everything the AI marks is stamped in violet ink. The materials are the archive's own: stamps, slip markers, folder tabs, finding-aid outlines, typewriter readouts. The product refuses the AI-dashboard default (no glowing orb, no gradients, no score rings) and reads as a calm, precise place where a person can check the work.\n\nDensity is document-first. Exactly one document owns the desk at a time (a CV, a report, a ledger); folder tabs swap it hard, never tile it. Dense surfaces (transcript, ledger, evidence) keep one text size and get rank from weight, case, reversal and rule. The 24px card rule is the layout armature: ruled cards put every text row on a 24px baseline, and spacing moves in 12/24 steps.\n\nColor is spent by meaning. Violet means the AI marked this. Red means a recording, and also the top rule of every catalog card. Ink buttons carry the one primary action per view. Nothing else is chromatic.",
     "keyCharacteristics": [
       "Cool board, white cards, blue-grey chrome; one violet voice, one red voice.",
       "Public Sans for reading, Courier Prime for call numbers, timecodes and readouts.",

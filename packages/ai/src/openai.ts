@@ -1,4 +1,4 @@
-import type { AnalysisProvider, CompletionRequest, CompletionResult } from "@aperture/types";
+import type { AnalysisProvider, CompletionRequest, CompletionResult } from "@kimma/types";
 import OpenAI from "openai";
 
 export class OpenAiAnalysisProvider implements AnalysisProvider {

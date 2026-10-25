@@ -15,7 +15,7 @@ export async function fetchGithub(handle: string): Promise<GithubSummary | null>
     const res = await fetch(`https://api.github.com/users/${h}/repos?sort=pushed&per_page=12`, {
       headers: {
         Accept: "application/vnd.github+json",
-        "User-Agent": "aperture-interviewer",
+        "User-Agent": "kimma-interviewer",
         ...(has("GITHUB_TOKEN") ? { Authorization: `Bearer ${env("GITHUB_TOKEN")}` } : {}),
       },
       signal: AbortSignal.timeout(10_000),

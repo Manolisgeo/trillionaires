@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 
 export async function writeAudit(input: {
   organizationId: string;

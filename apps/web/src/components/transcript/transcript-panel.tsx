@@ -1,9 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { ImportanceCategory } from "@aperture/types";
-import { matchesFilter } from "@aperture/conversation";
-import { cn } from "@aperture/ui";
+import type { ImportanceCategory } from "@kimma/types";
+import { matchesFilter } from "@kimma/conversation";
+import { cn } from "@kimma/ui";
 import { formatTimestamp } from "@/lib/time";
 
 type Segment = {

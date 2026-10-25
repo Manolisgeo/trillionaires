@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -130,7 +130,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
           <div>
             <h2 className="text-[11px] font-medium uppercase tracking-[0.16em] text-muted">Outcomes</h2>
             <p className="mt-3 text-sm leading-6 text-muted">
-              A person records what happened later. Aperture does not predict performance, retention, or who should be hired.
+              A person records what happened later. Kimma does not predict performance, retention, or who should be hired.
             </p>
             <ul className="mt-3 space-y-2 text-sm">
               {person.outcomes.map((outcome) => (

@@ -1,5 +1,5 @@
-import { prisma } from "@aperture/database";
-import { extractClaims } from "@aperture/intelligence";
+import { prisma } from "@kimma/database";
+import { extractClaims } from "@kimma/intelligence";
 
 export async function persistClaims(conversationId: string) {
   const conversation = await prisma.conversation.findUnique({
@@ -19,7 +19,7 @@ export async function persistClaims(conversationId: string) {
       text: segment.text,
       startTime: segment.startTime,
       endTime: segment.endTime,
-      isAgent: segment.speakerName === "Aperture" || /aperture/i.test(segment.speakerName),
+      isAgent: segment.speakerName === "Kimma" || /kimma/i.test(segment.speakerName),
     }));
 
   const speaker = conversation.participants.find((participant) => participant.personId);

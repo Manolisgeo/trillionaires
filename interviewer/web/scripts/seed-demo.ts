@@ -21,7 +21,7 @@ interface CvSpec { name: string; headline: string; contact: string; summary: str
 async function makeCv(cv: CvSpec): Promise<Buffer> {
   const doc = await PDFDocument.create();
   doc.setTitle(`${cv.name} - CV (synthetic demo)`);
-  doc.setAuthor("Aperture demo seed");
+  doc.setAuthor("Kimma demo seed");
   const page = doc.addPage([612, 792]);
   const reg = await doc.embedFont(StandardFonts.Helvetica);
   const bold = await doc.embedFont(StandardFonts.HelveticaBold);
@@ -260,7 +260,7 @@ function mayaInterview(role: Role, candidate: Candidate, claims: Claim[]): Omit<
   const pModel = probe("pr-model", "How would you design the data model for event ingestion at fifty thousand events per second?", null, "s3", -1, ["Where could it break?"]);
   const plan: Plan = {
     phases: [
-      { phase: "intro", minutes: 2, objectives: ["Disclose that Aperture is an AI, explain recording and how the call works", "Put the candidate at ease"], questions: [] },
+      { phase: "intro", minutes: 2, objectives: ["Disclose that Kimma is an AI, explain recording and how the call works", "Put the candidate at ease"], questions: [] },
       { phase: "behavioral", minutes: 10, objectives: ["Collect STAR evidence on ownership and collaboration"], questions: core },
       { phase: "background", minutes: 8, objectives: ["Verify the headline claims on the CV with concrete detail"], questions: [pLedger, pKafka, pPython] },
       { phase: "technical", minutes: 15, objectives: ["Assess service and data design on the shared board"], questions: [pModel], problemId: "p1" },
@@ -269,7 +269,7 @@ function mayaInterview(role: Role, candidate: Candidate, claims: Claim[]): Omit<
   };
   const T = (id: number, speaker: Segment["speaker"], start: number, end: number, text: string): Segment => ({ id: `seg${id}`, speaker, start, end, text });
   const transcript: Segment[] = [
-    T(1, "agent", 0, 34, "Thanks for joining, Maya. I am Aperture, an AI interviewer. This call is recorded and a person at Northwind reviews it. Let's start with a time you took ownership of a problem nobody had asked you to solve."),
+    T(1, "agent", 0, 34, "Thanks for joining, Maya. I am Kimma, an AI interviewer. This call is recorded and a person at Northwind reviews it. Let's start with a time you took ownership of a problem nobody had asked you to solve."),
     T(2, "candidate", 38, 82, "Our nightly balance reconciliation was failing silently for weeks. Nobody had asked me to fix it, so I wrote the alerting myself and ran it for a month before proposing it to the team. It caught a currency rounding bug in the first week."),
     T(3, "agent", 86, 110, "What did you do yourself, and how did you measure the result?"),
     T(4, "candidate", 114, 160, "I set an exit criterion up front: fourteen consecutive nights with zero balance drift across all tenants. We hit it on day sixteen after I fixed the rounding bug in currency conversion."),

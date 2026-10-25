@@ -1,4 +1,4 @@
-# Aperture — AI Interviewer Stack Decision
+# Kimma.ai — AI Interviewer Stack Decision
 
 **Scope:** the AI interviewer only (lower scope than lantern.md). The agent joins a live
 call, talks, and has its "own computer" that it screen-shares — opening the candidate's CV,
@@ -177,7 +177,7 @@ A second verification pass (live vendor docs + our research) settled the specifi
 - **But Recall is for joining EXTERNAL Zoom/Meet/Teams/Webex** — its docs do **not** list custom
   WebRTC rooms. For *our own LiveKit room* it's an unnecessary bot hop: we publish the screen
   track directly. Routing our own interview through a bot adds latency, a **1280×720 @ 15 fps**
-  cap, **$0.50/hr base + $0.10–$1.00/hr output + $0.15/hr transcription**, generic (non-Aperture)
+  cap, **$0.50/hr base + $0.10–$1.00/hr output + $0.15/hr transcription**, generic (non-Kimma.ai)
   bot branding, and platform/ToS risk (bots get kicked).
 - **Our research agrees:** across the 51 competitors, Recall.ai is used for **meeting *capture*
   (notetakers)** — Paraform (recruiter calls), Carv (notetaker), ModernLoop (notetaker only; its
@@ -188,7 +188,7 @@ A second verification pass (live vendor docs + our research) settled the specifi
   **screen-share output is undocumented**. No competitor uses it. Worth a hands-on trial *as an
   external-meeting joiner*, not for our own room.
 - **Verdict:** keep both behind a `MeetingProvider` interface for the **later** "join their
-  Zoom/Meet/Teams" mode — which is exactly Aperture's deferred Zoom/Meet/Teams integration and the
+  Zoom/Meet/Teams" mode — which is exactly Kimma.ai's deferred Zoom/Meet/Teams integration and the
   "Meeting" conversation type (that's the *Meeting Intelligence* surface lantern.md sells). For the
   **candidate interview MVP, publish the screen directly into our LiveKit room.** Recall is the
   standard — for the meeting-intelligence product, not this one.

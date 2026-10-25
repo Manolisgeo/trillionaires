@@ -1,7 +1,7 @@
 [project]
-name = "aperture-agent"
+name = "kimma-agent"
 version = "0.1.0"
-description = "Aperture AI interviewer voice agent"
+description = "Kimma AI interviewer voice agent"
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "livekit-agents[openai,anthropic,deepgram,cartesia,elevenlabs,silero,turn-detector,google]~=1.8",

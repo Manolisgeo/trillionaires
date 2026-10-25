@@ -11,7 +11,7 @@ const LABEL: Record<Choice, string> = { advance: "Advance", hold: "Hold", declin
 
 /** Demo only: the decision is kept in this browser's localStorage. There is no decision endpoint yet (see NOTES-ui-report.md). */
 export function Decision({ interviewId, open, onClose }: { interviewId: string; open: boolean; onClose: () => void }) {
-  const key = `aperture:decision:${interviewId}`;
+  const key = `kimma:decision:${interviewId}`;
   const [saved, setSaved] = useState<Saved | null>(null);
   const [choice, setChoice] = useState<Choice | null>(null);
   const [note, setNote] = useState("");

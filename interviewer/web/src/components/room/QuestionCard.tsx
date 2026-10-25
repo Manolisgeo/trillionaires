@@ -5,8 +5,8 @@ import type { ResolvedQuestion } from "./deskState";
 export function QuestionCard({ text, kind, resolved, source }: { text: string | null; kind: "core" | "probe" | null; resolved: ResolvedQuestion | null; source: string | null }) {
   if (!text || !resolved) {
     return (
-      <CatalogCard dashed kicker="NO QUESTION YET" right="ASKED BY APERTURE (AI)" aria-label="Current question">
-        <p className="m-0 max-w-[62ch] text-[17px] leading-7 text-ink-2">Each question appears here, in full, as Aperture asks it. Nothing is asked that you cannot read.</p>
+      <CatalogCard dashed kicker="NO QUESTION YET" right="ASKED BY KIMMA (AI)" aria-label="Current question">
+        <p className="m-0 max-w-[62ch] text-[17px] leading-7 text-ink-2">Each question appears here, in full, as Kimma asks it. Nothing is asked that you cannot read.</p>
       </CatalogCard>
     );
   }
@@ -24,7 +24,7 @@ export function QuestionCard({ text, kind, resolved, source }: { text: string | 
           {parts}
         </>
       }
-      right="ASKED BY APERTURE (AI)"
+      right="ASKED BY KIMMA (AI)"
     >
       {/* Rules live on the kicker and source rows only; the question sits between them on clean card, 12px clear of each rule. */}
       <p className="m-0 max-w-[62ch] py-3 text-xl leading-6 font-medium text-balance">{text}</p>

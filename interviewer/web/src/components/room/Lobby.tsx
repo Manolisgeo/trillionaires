@@ -93,7 +93,7 @@ export function Lobby({
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="flex min-h-14 flex-wrap items-center gap-x-3.5 bg-hollinger px-4 py-2 text-white sm:px-7">
-        <span className="text-sm font-bold tracking-[0.14em]">APERTURE</span>
+        <span className="text-sm font-bold tracking-[0.14em]">KIMMA.AI</span>
         <span className="font-mono text-sm text-rule-strong">
           {data.callNo} · {data.role.title} · {data.role.company}
         </span>
@@ -108,15 +108,15 @@ export function Lobby({
             <ul className="m-0 flex list-none flex-col gap-2 p-0 text-[15px] leading-6">
               {board
                 ? [
-                    "Aperture is in your Google Meet call. This page is only the shared worksheet.",
-                    "When Aperture asks you to draw or write, do it here. It can see the board and the pad, and it draws in violet.",
+                    "Kimma is in your Google Meet call. This page is only the shared worksheet.",
+                    "When Kimma asks you to draw or write, do it here. It can see the board and the pad, and it draws in violet.",
                     "The meeting is recorded and transcribed. A person at the company reads the report and decides.",
                   ].map((t) => <li key={t}>{t}</li>)
                 : [
-                    "You are talking to Aperture, an AI interviewer. It is not a person and it cannot make the decision.",
+                    "You are talking to Kimma, an AI interviewer. It is not a person and it cannot make the decision.",
                     `The call is recorded and transcribed. A person at ${data.role.company} reads the report and decides.`,
                     "Every question appears on screen as it is asked, with the line of your CV or the page it comes from.",
-                    "Say you are finished, or press the button, when you are done. Take your time to think; Aperture waits.",
+                    "Say you are finished, or press the button, when you are done. Take your time to think; Kimma waits.",
                     "You can ask for a human interviewer at any moment.",
                   ].map((t) => <li key={t}>{t}</li>)}
               <li className="font-mono text-[13px] text-muted">
@@ -127,7 +127,7 @@ export function Lobby({
 
           {board ? null : (
             <CatalogCard dashed kicker="MICROPHONE CHECK" right={mic.state === "ok" ? "READY" : "NOT CHECKED"} aria-label="Microphone check">
-              <p className="m-0 text-[15px] leading-6 text-ink-2">Aperture listens to you through your microphone. Check it now, then say a sentence out loud.</p>
+              <p className="m-0 text-[15px] leading-6 text-ink-2">Kimma listens to you through your microphone. Check it now, then say a sentence out loud.</p>
               <div
                 role="meter"
                 aria-label="Microphone level"

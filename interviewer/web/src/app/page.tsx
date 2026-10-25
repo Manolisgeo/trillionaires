@@ -39,7 +39,7 @@ export default async function Catalog() {
           title="The catalog is empty"
           action={<ButtonLink href="/roles/new">New role from a job description</ButtonLink>}
         >
-          Paste a job description and Aperture drafts the rubric: competencies, anchors and the core questions every candidate will be asked. You approve it before any candidate sees a link.
+          Paste a job description and Kimma drafts the rubric: competencies, anchors and the core questions every candidate will be asked. You approve it before any candidate sees a link.
         </EmptyState>
       ) : (
         <section aria-label="Collections" className="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))]">

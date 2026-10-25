@@ -126,7 +126,7 @@ export function shapesToSkeletons(shapes: SimpleShape[], n: number): Record<stri
   const ink = "#5a4aa8"; // violet: everything the AI marks
   const out: Record<string, unknown>[] = [];
   shapes.forEach((s, i) => {
-    const id = `aperture-${n}-${i}`;
+    const id = `kimma-${n}-${i}`;
     const base = { id, x: s.x, y: s.y, strokeColor: ink, roughness: 0, strokeWidth: 2 };
     if (s.kind === "rect" || s.kind === "ellipse") {
       out.push({

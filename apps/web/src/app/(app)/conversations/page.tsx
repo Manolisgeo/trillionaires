@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import Link from "next/link";
 import { StatusBadge } from "@/components/ui/badge";
@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/shell/page-header";
 import { EmptyState } from "@/components/shell/empty-state";
 import { formatDuration, formatRelative, typeLabel } from "@/lib/time";
-import type { ConversationStatus, ConversationType } from "@aperture/database";
+import type { ConversationStatus, ConversationType } from "@kimma/database";
 import type { Metadata } from "next";
-import { cn } from "@aperture/ui";
+import { cn } from "@kimma/ui";
 
 export const metadata: Metadata = { title: "Conversations" };
 

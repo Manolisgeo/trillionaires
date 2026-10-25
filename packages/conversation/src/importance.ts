@@ -1,4 +1,4 @@
-import type { ImportanceCategory, TranscriptSegment } from "@aperture/types";
+import type { ImportanceCategory, TranscriptSegment } from "@kimma/types";
 
 const DECISION_RE = /\b(we (will|should|decided|agreed)|let'?s go with|decision is)\b/i;
 const ACTION_RE = /\b(i'?ll |we'?ll |follow up|action item|send|schedule|next step)\b/i;

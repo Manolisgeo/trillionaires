@@ -17,7 +17,7 @@ ask_secret() { # name, prompt  (Enter = skip)
   set_val "$1" "$v"
 }
 
-echo "Aperture key setup. Writes $ENV_FILE"
+echo "Kimma key setup. Writes $ENV_FILE"
 echo "Press Enter to skip any key; features degrade gracefully without them."
 echo
 
@@ -36,7 +36,7 @@ echo "2. LiveKit (https://cloud.livekit.io -> project -> Settings -> Keys; or le
 ask LIVEKIT_URL "LiveKit URL" "ws://localhost:7880"
 ask LIVEKIT_API_KEY "LiveKit API key" "devkey"
 read -r -s -p "  LiveKit API secret [secret] (Enter for default): " v; echo; set_val LIVEKIT_API_SECRET "${v:-secret}"
-ask LIVEKIT_AGENT_NAME "Agent name" "aperture-interviewer"; echo
+ask LIVEKIT_AGENT_NAME "Agent name" "kimma-interviewer"; echo
 
 echo "3. Anthropic (https://console.anthropic.com -> API keys): prep + scoring"
 ask_secret ANTHROPIC_API_KEY "Anthropic API key"; echo

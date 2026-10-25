@@ -6,14 +6,14 @@ const sans = Public_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "70
 const mono = Courier_Prime({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-courier-prime", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Aperture",
+  title: "Kimma.ai",
   description: "An AI interviewer that points at the exact line it is asking about.",
 };
 
 const CONTRACT = `
 Direction contract: The Reading Room (seed 0358a816)
 
-THESIS: Aperture treats a candidate's background the way an archive treats a record: every claim catalogued with its provenance, every judgment cross-referenced to the moment it was said. It refuses the category default of an AI dashboard with a glowing orb.
+THESIS: Kimma treats a candidate's background the way an archive treats a record: every claim catalogued with its provenance, every judgment cross-referenced to the moment it was said. It refuses the category default of an AI dashboard with a glowing orb.
 
 OWN-WORLD: Hollinger blue-grey chrome #2F3B45, cool acid-free board #F4F5F2 (never cream), white catalog cards with a red top rule #C23B2E (red also and only = recording), violet stamp ink #5A4AA8 for everything the AI marks. Type: Public Sans, plus Courier Prime for call numbers and timecodes. Materials: stamps, slip markers, folder tabs, finding-aid outlines.
 

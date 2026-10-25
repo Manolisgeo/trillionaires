@@ -9,12 +9,12 @@ from urllib.parse import urlencode, urlparse, urlunparse, parse_qsl
 
 import httpx
 
-log = logging.getLogger("aperture.browser")
+log = logging.getLogger("kimma.browser")
 API = "https://api.browserbase.com/v1"
 
 _HIGHLIGHT_JS = r"""
 (needle) => {
-  document.querySelectorAll('mark[data-aperture]').forEach(m => {
+  document.querySelectorAll('mark[data-kimma]').forEach(m => {
     const p = m.parentNode; p.replaceChild(document.createTextNode(m.textContent), m); p.normalize();
   });
   const norm = s => s.replace(/\s+/g, ' ').trim().toLowerCase();
@@ -30,7 +30,7 @@ _HIGHLIGHT_JS = r"""
       const idx = n.textContent.toLowerCase().indexOf(t);
       if (idx >= 0) {
         const r = document.createRange(); r.setStart(n, idx); r.setEnd(n, idx + t.length);
-        const mk = document.createElement('mark'); mk.setAttribute('data-aperture', '1'); mk.style.cssText = style;
+        const mk = document.createElement('mark'); mk.setAttribute('data-kimma', '1'); mk.style.cssText = style;
         r.surroundContents(mk); mk.scrollIntoView({block: 'center', behavior: 'smooth'}); return true;
       }
     }

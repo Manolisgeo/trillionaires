@@ -1,7 +1,7 @@
 import { NewRoleForm } from "@/components/recruiter/NewRoleForm";
 import { PageTitle, RecruiterShell } from "@/components/recruiter/Shell";
 
-export const metadata = { title: "New role · Aperture" };
+export const metadata = { title: "New role · Kimma" };
 
 export default function NewRolePage() {
   return (

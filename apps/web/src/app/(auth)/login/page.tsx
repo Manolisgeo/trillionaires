@@ -16,7 +16,7 @@ export default function LoginPage() {
       detail="A realtime AI participant that listens, follows up, and produces a structured report — facts separated from inference."
       footer="The AI is always disclosed. Recording is never silent."
     >
-      <p className="text-sm font-medium tracking-tight lg:hidden">Aperture</p>
+      <p className="text-sm font-medium tracking-tight lg:hidden">Kimma</p>
       <h1 className="text-3xl font-medium tracking-tight">Sign in</h1>
       <p className="mt-2 text-sm text-muted">Conversation intelligence for teams.</p>
       <form action={action} className="mt-8 space-y-4">

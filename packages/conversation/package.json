@@ -1,5 +1,5 @@
 {
-  "name": "@aperture/conversation",
+  "name": "@kimma/conversation",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -12,7 +12,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@aperture/types": "workspace:*"
+    "@kimma/types": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.8.3",

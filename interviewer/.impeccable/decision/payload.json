@@ -1,5 +1,5 @@
 {
-  "title": "Choose the visual world for Aperture",
+  "title": "Choose the visual world for Kimma.ai",
   "question": "The roll assigned The Reading Room. Keep it, take an alternate, or re-roll.",
   "options": [
     {
@@ -62,7 +62,7 @@
       "materials": ["fine neutral scale", "framed evidence", "hairline ghost controls"],
       "viewport": "A calm two-column room: the agent's screen on the left, captions and claim-proof pairs on the right, one accent for the live state.",
       "case": "Fuses cleanly: claim-then-proof is exactly evidence-linked scoring, and recruiters live in this look; holds audience identification and ties on clarity.",
-      "risk": "It is how most AI recruiting tools already look, so Aperture blends in with Metaview and Ashby.",
+      "risk": "It is how most AI recruiting tools already look, so Kimma.ai blends in with Metaview and Ashby.",
       "hero": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing-hero.webp",
       "board": "https://impeccable.style/worlds/cards/digital-design-canon-monochrome-product-marketing.webp",
       "wireframe": {

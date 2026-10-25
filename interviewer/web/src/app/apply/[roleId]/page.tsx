@@ -6,7 +6,7 @@ import { callNo } from "@/lib/format";
 import { store } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Apply · Aperture" };
+export const metadata: Metadata = { title: "Apply · Kimma" };
 
 export default async function ApplyPage({ params }: { params: Promise<{ roleId: string }> }) {
   const { roleId } = await params;

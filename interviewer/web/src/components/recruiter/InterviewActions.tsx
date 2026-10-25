@@ -44,7 +44,7 @@ export function InterviewActions({ id, status, meetUrl, hasReport }: { id: strin
           type="url"
           inputMode="url"
           placeholder="https://meet.google.com/abc-defg-hij"
-          hint="Aperture joins the call as an AI interviewer, shares its screen and records, with a notice in the meeting chat."
+          hint="Kimma joins the call as an AI interviewer, shares its screen and records, with a notice in the meeting chat."
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           disabled={status !== "scheduled" || sent}

@@ -57,7 +57,7 @@ export function usePreviewScript(data: RoomData, scene: PreviewScene) {
     if (probe) dispatch({ msg: { type: "cv.highlight", id: probe.id, quote, page: probe.source?.page ?? 1, note: "Preview highlight" }, at: t0 });
     dispatch({ msg: { type: "question", text: askedText, kind: asked?.kind ?? "core" }, at: t0 });
     say("p1", "agent", askedText, 0);
-    say("p2", "candidate", "[Preview line] Your spoken answers appear here as you say them, in the same type as Aperture's.", 8);
+    say("p2", "candidate", "[Preview line] Your spoken answers appear here as you say them, in the same type as Kimma's.", 8);
     if (data.github || data.firstLink) {
       const url = data.github?.url ?? data.firstLink ?? "";
       dispatch({ msg: { type: "browser.session", liveViewUrl: null }, at: t0 });

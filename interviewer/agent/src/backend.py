@@ -10,7 +10,7 @@ from typing import Any
 
 import httpx
 
-log = logging.getLogger("aperture.backend")
+log = logging.getLogger("kimma.backend")
 
 
 def new_id() -> str:

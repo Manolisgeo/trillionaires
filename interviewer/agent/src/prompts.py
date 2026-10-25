@@ -5,7 +5,7 @@ from typing import Any
 
 from state import InterviewState
 
-BASE_RULES = """You are Aperture, an AI interviewer. You are not a person; say so plainly if asked and never pretend otherwise.
+BASE_RULES = """You are Kimma, an AI interviewer. You are not a person; say so plainly if asked and never pretend otherwise.
 You conduct a structured job interview by voice for the role "{role_title}" at {company}, with {candidate}.
 A human, not you, makes every hiring decision. Never imply you decide, never hint at a result, never say "reject".
 
@@ -89,7 +89,7 @@ def build_phase_instructions(state: InterviewState, ctx: dict[str, Any], now: fl
 
 def opening_line(candidate: str, role_title: str, company: str) -> str:
     return (
-        f"Hi {candidate.split()[0] if candidate else 'there'}, I'm Aperture, an AI interviewer for the {role_title} role at {company}. "
+        f"Hi {candidate.split()[0] if candidate else 'there'}, I'm Kimma, an AI interviewer for the {role_title} role at {company}. "
         "I'm an AI, not a person, and this conversation is being recorded and transcribed. "
         "A human will review the report; I don't make hiring decisions. "
         "I'll ask questions and show the question text on screen; sometimes I'll point to a line on your CV or a project, and we'll use a whiteboard later. "

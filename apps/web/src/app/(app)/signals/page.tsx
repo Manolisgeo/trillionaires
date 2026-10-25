@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import { createTrackerAction } from "@/actions/scorecard";
 import { PageHeader } from "@/components/shell/page-header";

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { cn } from "@aperture/ui";
-import type { ImportanceCategory } from "@aperture/types";
+import { cn } from "@kimma/ui";
+import type { ImportanceCategory } from "@kimma/types";
 import { TranscriptPanel } from "@/components/transcript/transcript-panel";
 import { ConversationTimeline } from "@/components/conversation/timeline";
 import { ReportView } from "@/components/report/report-view";
@@ -158,7 +158,7 @@ export function ConversationWorkspace({
             </h2>
             <p className="mt-3 text-sm leading-6 text-muted">
               FACT is transcript-supported. INFERENCE is interpretation. UNCERTAINTY is weak or
-              conflicting evidence. Aperture never makes the hiring, purchasing, or research
+              conflicting evidence. Kimma never makes the hiring, purchasing, or research
               decision.
             </p>
             {insights.length > 0 ? (

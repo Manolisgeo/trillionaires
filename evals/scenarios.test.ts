@@ -4,8 +4,8 @@ import {
   questionsCoveredByUtterance,
   scoreSegment,
   selectNextAction,
-} from "@aperture/conversation";
-import type { ConversationState, Question } from "@aperture/types";
+} from "@kimma/conversation";
+import type { ConversationState, Question } from "@kimma/types";
 
 function state(partial: Partial<ConversationState> = {}): ConversationState {
   return {
@@ -24,7 +24,7 @@ function state(partial: Partial<ConversationState> = {}): ConversationState {
       ],
       participants: [
         { id: "human", displayName: "Alex", role: "PARTICIPANT", isAgent: false },
-        { id: "agent", displayName: "Aperture", role: "AI_AGENT", isAgent: true },
+        { id: "agent", displayName: "Kimma", role: "AI_AGENT", isAgent: true },
       ],
     }),
     conversationTimeSeconds: 30,

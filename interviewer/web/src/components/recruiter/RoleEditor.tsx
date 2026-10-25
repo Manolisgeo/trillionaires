@@ -156,7 +156,7 @@ export function RoleEditor({ initial }: { initial: Role }) {
       {role.status === "approved" ? (
         <section aria-label="Candidate application link" className="flex flex-col gap-3 border border-rule bg-card px-5 py-4">
           <SeriesHeading as="h2">Candidate application link</SeriesHeading>
-          <p className="m-0 max-w-[65ch] text-sm leading-[21px] text-ink">Send this link to applicants. They upload a CV and links, review what Aperture gathered, then join their interview.</p>
+          <p className="m-0 max-w-[65ch] text-sm leading-[21px] text-ink">Send this link to applicants. They upload a CV and links, review what Kimma gathered, then join their interview.</p>
           <div className="flex flex-wrap items-center gap-4">
             <OriginLink path={`/apply/${role.id}`} />
             <CopyButton path={`/apply/${role.id}`} label="Copy application link" />
@@ -181,7 +181,7 @@ export function RoleEditor({ initial }: { initial: Role }) {
           {drafting ? (
             <div className="flex flex-col gap-2 border border-dashed border-rule-strong bg-card px-6 py-8">
               <Cataloguing label="Cataloguing the job description" />
-              <p className="m-0 max-w-[62ch] text-sm text-ink-2">Aperture is reading the job description and drafting competencies, anchors and core questions. This page updates by itself.</p>
+              <p className="m-0 max-w-[62ch] text-sm text-ink-2">Kimma is reading the job description and drafting competencies, anchors and core questions. This page updates by itself.</p>
             </div>
           ) : null}
 
@@ -301,7 +301,7 @@ export function RoleEditor({ initial }: { initial: Role }) {
               </div>
 
               <section aria-label="Guardrails" className="flex flex-col gap-1.5 border border-dashed border-rule-strong px-5 py-3.5 text-sm leading-[21px]">
-                <span className="font-mono text-xs tracking-[0.12em] text-muted">GUARDRAILS · APERTURE WILL NEVER ASK ABOUT</span>
+                <span className="font-mono text-xs tracking-[0.12em] text-muted">GUARDRAILS · KIMMA WILL NEVER ASK ABOUT</span>
                 {profile.guardrailNotes.length ? (
                   <ul className="m-0 flex list-none flex-col gap-1 p-0">
                     {profile.guardrailNotes.map((g, i) => (

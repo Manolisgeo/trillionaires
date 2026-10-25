@@ -35,7 +35,7 @@ export function NewRoleForm() {
       </div>
       <Textarea
         label="Job description"
-        hint="Paste the full text. Aperture drafts competencies, anchors and core questions from it; you review everything before approval."
+        hint="Paste the full text. Kimma drafts competencies, anchors and core questions from it; you review everything before approval."
         required
         rows={14}
         value={jd}

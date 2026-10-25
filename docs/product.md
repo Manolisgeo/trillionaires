@@ -1,6 +1,6 @@
 # Product
 
-Aperture is a realtime conversation intelligence platform. The long-term product is an AI participant that can join or host human conversations, speak and listen naturally, and turn every conversation into structured evidence.
+Kimma.ai is a realtime conversation intelligence platform. The long-term product is an AI participant that can join or host human conversations, speak and listen naturally, and turn every conversation into structured evidence.
 
 The first wedge is AI-powered interviews. The product is not an interview tool with other use cases bolted on. It is a **Conversation** platform. Interviews are one conversation type.
 
@@ -54,7 +54,7 @@ The report is the narrative. The scorecard is the decision aid, and a person sti
 
 Each objective becomes a rubric criterion with a strong anchor and a weak anchor. After the transcript exists, a draft attaches verbatim quotes and a suggested rating of 2, 3, or blank. A 4 is human-only. Reviewed ratings are not overwritten. Tracker phrases (metrics, incidents, commitments, compensation, competing options, decision process) are organization signals, not scores.
 
-The setup used by Metaview, BrightHire, Gong, and Alex, and what Aperture implements in English, is in [benchmarks.md](./benchmarks.md).
+The setup used by Metaview, BrightHire, Gong, and Alex, and what Kimma.ai implements in English, is in [benchmarks.md](./benchmarks.md).
 
 ## Report standard
 

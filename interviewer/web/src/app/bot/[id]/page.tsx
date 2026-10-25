@@ -4,7 +4,7 @@ import BotBridge from "@/components/room/Bot";
 import { loadRoomData } from "../../room/_data";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Aperture · meeting bridge", robots: { index: false } };
+export const metadata: Metadata = { title: "Kimma.ai · meeting bridge", robots: { index: false } };
 
 /** Fixed 1280x720: this page is the Recall bot's camera, not something a person navigates. */
 export default async function BotPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }) {

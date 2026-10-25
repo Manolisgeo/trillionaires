@@ -250,7 +250,7 @@ export default function Worksheet({ channel, adds, applyAdds, readOnly = false, 
             </div>
           </div>
           {readOnly ? null : (
-            <p className="m-0 font-mono text-[12px] text-muted">Board · what Aperture draws appears in violet · both of you can edit</p>
+            <p className="m-0 font-mono text-[12px] text-muted">Board · what Kimma draws appears in violet · both of you can edit</p>
           )}
         </div>
         {readOnly ? null : (
@@ -264,7 +264,7 @@ export default function Worksheet({ channel, adds, applyAdds, readOnly = false, 
               onChange={(e) => onPadChange(e.target.value)}
               onPaste={(e) => onPaste?.("pad", e.clipboardData.getData("text").length)}
               spellCheck={false}
-              placeholder="Notes, pseudocode or an outline. Aperture can read this pad."
+              placeholder="Notes, pseudocode or an outline. Kimma can read this pad."
               className="room-pad min-h-[160px] flex-1 resize-none border border-rule bg-white px-3 py-0 font-mono text-[14px] text-ink"
             />
           </div>

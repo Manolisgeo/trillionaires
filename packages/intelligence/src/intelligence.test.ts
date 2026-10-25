@@ -1,4 +1,4 @@
-import { createInitialState } from "@aperture/conversation";
+import { createInitialState } from "@kimma/conversation";
 import { describe, expect, it } from "vitest";
 import { decide } from "./controller";
 import { extractClaims } from "./claims";

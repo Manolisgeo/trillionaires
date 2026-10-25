@@ -143,7 +143,7 @@ export function ApplyForm({ roleId, role, company }: { roleId: string; role: str
         </SeriesHeading>
         <ul className="m-0 flex max-w-[68ch] list-disc flex-col gap-2 pl-5 text-sm leading-[22px] text-ink-2">
           <li><b className="text-ink">What we read.</b> Your CV, your LinkedIn export if you add one, your public GitHub repositories, and the links you list here. We do not search the web for you beyond these.</li>
-          <li><b className="text-ink">An AI interviews you.</b> The interviewer is Aperture, an AI. It is not a person and says so at the start.</li>
+          <li><b className="text-ink">An AI interviews you.</b> The interviewer is Kimma, an AI. It is not a person and says so at the start.</li>
           <li><b className="text-ink">Recorded and captioned.</b> The interview is recorded, and live captions are shown throughout.</li>
           <li><b className="text-ink">A person decides.</b> A person at {company} reads the report and makes the decision. The AI never rejects anyone.</li>
           <li><b className="text-ink">You can ask for a human.</b> You can ask for a human interviewer instead, before the interview starts.</li>

@@ -1,5 +1,5 @@
-import { detectContradictions } from "@aperture/conversation";
-import type { Fact } from "@aperture/types";
+import { detectContradictions } from "@kimma/conversation";
+import type { Fact } from "@kimma/types";
 
 export type ClaimConfidence = "DIRECT" | "REPEATED" | "CORROBORATED" | "CONTRADICTED" | "UNKNOWN";
 
@@ -36,7 +36,7 @@ export function extractClaims(
   lines: ClaimLine[],
   topics: Array<string | { title: string; text?: string }>,
 ): ExtractedClaim[] {
-  const spoken = lines.filter((line) => !line.isAgent && !/aperture/i.test(line.speakerName));
+  const spoken = lines.filter((line) => !line.isAgent && !/kimma/i.test(line.speakerName));
   const claims: ExtractedClaim[] = [];
 
   for (const line of spoken) {

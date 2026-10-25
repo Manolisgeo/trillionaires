@@ -1,4 +1,4 @@
-import { prisma } from "@aperture/database";
+import { prisma } from "@kimma/database";
 import { requireOrg } from "@/server/org";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -11,7 +11,7 @@ import { ConversationToolbar } from "@/components/conversation/conversation-tool
 import { PageHeader } from "@/components/shell/page-header";
 import { typeLabel } from "@/lib/time";
 import { evidenceFields } from "@/lib/quotes";
-import { talkStats } from "@aperture/conversation";
+import { talkStats } from "@kimma/conversation";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -126,7 +126,7 @@ export default async function ConversationDetailPage({
         <div className="mt-8 rounded-xl border border-line bg-white p-5">
           <h2 className="text-sm font-medium">Recording and AI disclosure</h2>
           <p className="mt-2 text-sm leading-6 text-muted">
-            This conversation will be recorded. An AI participant named Aperture will join, listen,
+            This conversation will be recorded. An AI participant named Kimma will join, listen,
             and speak. It is not a human. Consent is required before the room can start.
           </p>
           <div className="mt-4">

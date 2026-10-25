@@ -35,7 +35,7 @@ export function assemblePlan(role: RoleProfile, out: Pick<PlanOut, "probes" | "o
     const base = { phase, minutes: mins[phase] };
     switch (phase) {
       case "intro":
-        return { ...base, objectives: ["Disclose that Aperture is an AI, explain recording and how the call works", "Put the candidate at ease"], questions: [] };
+        return { ...base, objectives: ["Disclose that Kimma is an AI, explain recording and how the call works", "Put the candidate at ease"], questions: [] };
       case "behavioral":
         return {
           ...base, objectives: out.objectives.behavioral,
@@ -70,7 +70,7 @@ function sanitizeBrief(items: PlanOut["brief"], role: RoleProfile, candidate: Ca
   };
 }
 
-const SYSTEM = `You prepare a structured interview for an AI interviewer (Aperture). Output follows the schema exactly.
+const SYSTEM = `You prepare a structured interview for an AI interviewer (Kimma). Output follows the schema exactly.
 ${UNTRUSTED_RULE}
 Rules:
 - brief: one item per must-have skill (bucket matched = CV/GitHub evidence supports it; unverified = claimed but vague or unquantified; gap = no evidence), plus "flag" items for inconsistencies or timeline gaps. Use the given ids; claimId must come from the candidate's claims. note is one plain sentence.

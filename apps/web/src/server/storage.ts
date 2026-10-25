@@ -7,7 +7,7 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import type { ObjectStorageProvider } from "@aperture/types";
+import type { ObjectStorageProvider } from "@kimma/types";
 
 function client(): S3Client {
   return new S3Client({
@@ -21,7 +21,7 @@ function client(): S3Client {
   });
 }
 
-const bucket = () => process.env.S3_BUCKET ?? "aperture-recordings";
+const bucket = () => process.env.S3_BUCKET ?? "kimma-recordings";
 
 async function ensureBucket(): Promise<void> {
   const s3 = client();

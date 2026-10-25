@@ -18,6 +18,6 @@ These tests do not require a microphone. They score the reasoning layer against 
 Run:
 
 ```bash
-pnpm --filter @aperture/evals test
-pnpm --filter @aperture/conversation test
+pnpm --filter @kimma/evals test
+pnpm --filter @kimma/conversation test
 ```

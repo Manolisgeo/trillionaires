@@ -121,7 +121,7 @@ wheels = [
 ]
 
 [[package]]
-name = "aperture-agent"
+name = "kimma-agent"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

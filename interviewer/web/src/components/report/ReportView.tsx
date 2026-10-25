@@ -40,7 +40,7 @@ export function ReportView({ interview, role, candidate, report }: { interview: 
             <span className="font-mono text-[13px] tracking-[0.04em] whitespace-nowrap text-muted">{callNo.interview(interview.id, interview.createdAt)}</span>
           </div>
           <span className="text-sm text-muted">
-            Interviewed by Aperture (AI) on {date}{duration ? `, ${duration}` : ""}. Draft for human review. Ratings of 4 are reserved for people.
+            Interviewed by Kimma (AI) on {date}{duration ? `, ${duration}` : ""}. Draft for human review. Ratings of 4 are reserved for people.
           </span>
         </div>
 
@@ -131,7 +131,7 @@ export function ReportView({ interview, role, candidate, report }: { interview: 
                 <li key={s.id} id={`seg-${s.id}`} className="flex gap-3">
                   <span className="flex-none font-mono text-muted tabular-nums">{mmss(s.start)}</span>
                   <span className={s.speaker === "agent" ? "text-stamp" : "text-ink"}>
-                    <b className="mr-1.5 text-xs tracking-[0.08em] uppercase">{s.speaker === "agent" ? "Aperture" : "Candidate"}</b>
+                    <b className="mr-1.5 text-xs tracking-[0.08em] uppercase">{s.speaker === "agent" ? "Kimma" : "Candidate"}</b>
                     {s.text}
                   </span>
                 </li>
