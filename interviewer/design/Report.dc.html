@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aperture — interview report</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F2;color:#1E262D;font-family:'Public Sans',system-ui,sans-serif}
+a{color:#5A4AA8}a:hover{color:#43358A}
+.mono{font-family:'Courier Prime',ui-monospace,monospace}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="min-height: 1180px; display: flex; flex-direction: column;">
+  <header style="background: #2F3B45; color: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; gap: 28px; padding: 0 28px; min-height: 56px;">
+    <span style="font-weight: 700; letter-spacing: 0.14em; font-size: 14px;">APERTURE</span>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 22px; font-size: 14px;">
+      <a href="Catalog.dc.html" style="color: #C9D2D7; text-decoration: none;">Catalog</a>
+      <a href="Role.dc.html" style="color: #C9D2D7; text-decoration: none;">Roles</a>
+      <a href="#" style="color: #FFFFFF; text-decoration: none; font-weight: 600; box-shadow: inset 0 -2px 0 #FFFFFF; padding: 18px 0 16px;">Reports</a>
+    </nav>
+  </header>
+
+  <div style="width: 100%; max-width: 1240px; margin: 0 auto; padding: 32px 28px 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start;">
+
+    <main style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span class="mono" style="font-size: 13px; letter-spacing: 0.08em; color: #5C6770;">FINDING AID · AP-2026.0142 · INTERVIEWED 25 OCT 2026 · 41 MIN</span>
+        <h1 style="margin: 0; font-size: 30px; line-height: 38px; font-weight: 700;">Maya Okafor <span style="font-weight: 400; color: #5C6770;">— Senior Backend Engineer, Northwind</span></h1>
+        <span style="font-size: 14px; color: #5C6770;">Interviewed by Aperture (AI). Draft for human review. Ratings of 4 are reserved for people.</span>
+      </div>
+
+      <section aria-label="Suggestion" style="background: #FFFFFF; border: 1px solid #D5DAD8; border-top: 3px solid #C23B2E; padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+        <div style="transform: rotate(-2deg); border: 2px solid #5A4AA8; color: #5A4AA8; padding: 8px 14px; border-radius: 4px; display: flex; flex-direction: column; align-items: center; gap: 2px;">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.16em;">SUGGESTED</span>
+          <span style="font-size: 20px; font-weight: 700; letter-spacing: 0.08em;">ADVANCE</span>
+        </div>
+        <p style="margin: 0; flex: 1 1 360px; font-size: 15px; line-height: 23px;">Strong, specific evidence on ownership and system design, each backed by her own decisions with results. Testing practice was not covered enough to rate. <b>A person makes the decision.</b></p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button type="button" style="height: 44px; padding: 0 18px; border-radius: 6px; border: 0; background: #1E262D; color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer;">Record my decision</button>
+          <button type="button" style="height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Export</button>
+        </div>
+      </section>
+
+      <section aria-label="Scope note" style="display: flex; flex-direction: column; gap: 8px;">
+        <h2 class="mono" style="margin: 0; font-size: 13px; letter-spacing: 0.14em; color: #3F4A53; font-weight: 700;">SCOPE NOTE</h2>
+        <p style="margin: 0; font-size: 15px; line-height: 24px; max-width: 72ch;">Maya described leading Ledgerline's move to event sourcing, including which decisions were hers and which were the team's, and quantified the outcome. She walked through an idempotent ingestion design on the worksheet and adapted it when the throughput constraint changed. On testing she spoke in general terms; no example was given.</p>
+      </section>
+
+      <section aria-label="Series" style="display: flex; flex-direction: column; gap: 0; border-top: 2px solid #1E262D;">
+        <article style="padding: 18px 0 20px; border-bottom: 1px solid #D5DAD8; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 21px;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: baseline;">
+            <span><span class="mono" style="color: #5C6770;">SERIES 1 ·</span> <b style="text-transform: uppercase; letter-spacing: 0.06em;">Ownership</b> <span style="color: #5C6770;">· weight 3</span></span>
+            <span style="display: inline-flex; gap: 4px;" role="img" aria-label="Suggested rating 3 of 4">
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #A9B6BD; color: #5C6770;">1</span>
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #A9B6BD; color: #5C6770;">2</span>
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; background: #5A4AA8; color: #FFFFFF; font-weight: 700;">3</span>
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px dashed #A9B6BD; color: #8A959C;">4</span>
+            </span>
+          </div>
+          <p style="margin: 0; max-width: 72ch;">Named the decisions she made alone and the ones she took to the team, and tied them to a measured result. Matches the strong anchor: "acts without being asked, owns the outcome, can say what they would change."</p>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <a href="#" style="display: flex; gap: 12px; text-decoration: none; color: #1E262D; background: #F4F5F2; padding: 8px 12px; border-left: 3px solid #5A4AA8;">
+              <span class="mono" style="color: #5A4AA8; font-weight: 700; flex: 0 0 auto;">▶ 14:32</span>
+              <span>"The decision to use event sourcing was mine. Splitting the ledger by account was the team's call, and I disagreed at first."</span>
+            </a>
+            <a href="#" style="display: flex; gap: 12px; text-decoration: none; color: #1E262D; background: #F4F5F2; padding: 8px 12px; border-left: 3px solid #5A4AA8;">
+              <span class="mono" style="color: #5A4AA8; font-weight: 700; flex: 0 0 auto;">▶ 15:06</span>
+              <span>"Reconciliation errors went from around 120 a week to about 75, which is the 38 percent on my CV."</span>
+            </a>
+          </div>
+          <span class="mono" style="font-size: 12px; color: #5C6770;">Asked as Q2.3 · probe on CV p.1 l.14</span>
+        </article>
+
+        <article style="padding: 18px 0 20px; border-bottom: 1px solid #D5DAD8; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 21px;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: baseline;">
+            <span><span class="mono" style="color: #5C6770;">SERIES 2 ·</span> <b style="text-transform: uppercase; letter-spacing: 0.06em;">System design</b> <span style="color: #5C6770;">· weight 3</span></span>
+            <span style="display: inline-flex; gap: 4px;" role="img" aria-label="Suggested rating 3 of 4">
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #A9B6BD; color: #5C6770;">1</span>
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #A9B6BD; color: #5C6770;">2</span>
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; background: #5A4AA8; color: #FFFFFF; font-weight: 700;">3</span>
+              <span class="mono" style="width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border: 1px dashed #A9B6BD; color: #8A959C;">4</span>
+            </span>
+          </div>
+          <p style="margin: 0; max-width: 72ch;">Drew an ingestion path with deduplication keys on the worksheet, then moved the dedup store when the volume constraint changed.</p>
+          <a href="#" style="display: flex; gap: 12px; text-decoration: none; color: #1E262D; background: #F4F5F2; padding: 8px 12px; border-left: 3px solid #5A4AA8;">
+            <span class="mono" style="color: #5A4AA8; font-weight: 700; flex: 0 0 auto;">▶ 29:47</span>
+            <span>"At ten times the volume I wouldn't keep the keys in Postgres; I'd put a TTL'd set in front and accept rare duplicates downstream."</span>
+          </a>
+          <span class="mono" style="font-size: 12px; color: #5C6770;">Worksheet snapshot W-2 attached</span>
+        </article>
+
+        <article style="padding: 18px 0 20px; border-bottom: 1px solid #D5DAD8; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 21px;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center;">
+            <span><span class="mono" style="color: #5C6770;">SERIES 3 ·</span> <b style="text-transform: uppercase; letter-spacing: 0.06em;">Testing practice</b> <span style="color: #5C6770;">· weight 2</span></span>
+            <span style="transform: rotate(-1.5deg); border: 1.5px solid #5C6770; color: #3F4A53; padding: 3px 10px; border-radius: 3px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em;">INSUFFICIENT EVIDENCE</span>
+          </div>
+          <p style="margin: 0; max-width: 72ch;">Spoke about testing in general terms only. No rating was suggested rather than guessing.</p>
+          <span style="font-size: 14px;"><b>Ask in the next round:</b> "Tell me about a bug that reached production. What test would have caught it?"</span>
+        </article>
+      </section>
+    </main>
+
+    <aside style="flex: 1 1 320px; max-width: 380px; display: flex; flex-direction: column; gap: 20px;">
+      <section aria-label="Recording" style="background: #FFFFFF; border: 1px solid #D5DAD8; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: #5C6770;">RECORDING</span>
+          <span class="mono" style="font-size: 13px;">14:32 / 41:08</span>
+        </div>
+        <div aria-hidden="true" style="height: 40px; background-image: repeating-linear-gradient(to right, #A9B6BD 0, #A9B6BD 2px, transparent 2px, transparent 5px); position: relative;">
+          <span style="position: absolute; left: 35%; top: -4px; bottom: -4px; width: 2px; background: #5A4AA8;"></span>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" aria-label="Play from 14:32" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: #1E262D; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 2l9 5-9 5z" fill="#FFFFFF"/></svg></button>
+          <span style="font-size: 13px; color: #5C6770; align-self: center;">Every quote jumps here.</span>
+        </div>
+      </section>
+
+      <section aria-label="Strengths and concerns" style="background: #FFFFFF; border: 1px solid #D5DAD8; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 21px;">
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: #5C6770;">STRENGTHS</span>
+        <span>Separates her own decisions from the team's, with numbers.</span>
+        <span>Adapts a design when a constraint changes.</span>
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: #5C6770; margin-top: 6px;">CONCERNS</span>
+        <span>Testing practice unverified.</span>
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: #5C6770; margin-top: 6px;">OPEN QUESTIONS</span>
+        <span>Why she disagreed with splitting the ledger by account.</span>
+      </section>
+
+      <section aria-label="Integrity notes" style="border: 1px dashed #A9B6BD; padding: 14px 18px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 20px; color: #3F4A53;">
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: #5C6770;">INTEGRITY NOTES · METADATA, NOT A VERDICT</span>
+        <span>One tab switch at 22:10 for 6 seconds. No paste events on the worksheet.</span>
+      </section>
+      <p class="mono" style="margin: 0; font-size: 11px; color: #8A959C;">Synthetic demo report</p>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1180}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

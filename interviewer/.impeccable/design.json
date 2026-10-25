@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T13:17:08.450965+00:00",
+  "title": "Design System: Aperture",
+  "extensions": {
+    "colorMeta": {
+      "hollinger": {
+        "role": "neutral",
+        "displayName": "Hollinger Blue-Grey",
+        "canonical": "#2f3b45",
+        "tonalRamp": [
+          "#040c14",
+          "#1c2831",
+          "#3a4751",
+          "#5b6873",
+          "#7d8b97",
+          "#a2b0bc",
+          "#c1d0dc",
+          "#e8f0f6"
+        ]
+      },
+      "board": {
+        "role": "neutral",
+        "displayName": "Acid-Free Board",
+        "canonical": "#f4f5f2",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#262725",
+          "#454543",
+          "#666664",
+          "#898987",
+          "#adaeab",
+          "#cdcecb",
+          "#eeefed"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1e262d",
+        "tonalRamp": [
+          "#060c12",
+          "#1f272f",
+          "#3d464e",
+          "#5e6770",
+          "#818b93",
+          "#a5afb8",
+          "#c5cfd9",
+          "#eaeff4"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#5c6770",
+        "tonalRamp": [
+          "#050c13",
+          "#1e282f",
+          "#3c464f",
+          "#5d6871",
+          "#7f8b94",
+          "#a4b0ba",
+          "#c3d0da",
+          "#e9eff5"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong",
+        "canonical": "#a9b6bd",
+        "tonalRamp": [
+          "#040d11",
+          "#1e282e",
+          "#3c474d",
+          "#5c686e",
+          "#7f8b92",
+          "#a3b0b7",
+          "#c3d0d7",
+          "#e9f0f3"
+        ]
+      },
+      "stamp": {
+        "role": "primary",
+        "displayName": "Stamp Ink Violet",
+        "canonical": "#5a4aa8",
+        "tonalRamp": [
+          "#130043",
+          "#280767",
+          "#44318d",
+          "#6354b3",
+          "#8579db",
+          "#a99eff",
+          "#c8beff",
+          "#ebe8ff"
+        ]
+      },
+      "redline": {
+        "role": "secondary",
+        "displayName": "Redline",
+        "canonical": "#c23b2e",
+        "tonalRamp": [
+          "#390000",
+          "#620000",
+          "#8b0000",
+          "#b42d22",
+          "#de5646",
+          "#ff7d6a",
+          "#ff9d89",
+          "#ffd9cd"
+        ]
+      },
+      "error-ink": {
+        "role": "error",
+        "displayName": "Error Ink",
+        "canonical": "#a8322a",
+        "tonalRamp": [
+          "#350000",
+          "#5d0000",
+          "#850608",
+          "#ad372f",
+          "#d75d51",
+          "#ff8375",
+          "#ffa394",
+          "#ffdbd2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles."
+      },
+      "question": {
+        "displayName": "Question",
+        "purpose": "The interview question on its catalog card."
+      },
+      "dense": {
+        "displayName": "Dense",
+        "purpose": "Transcript, ledgers, evidence, nav; the single dense size."
+      },
+      "readout": {
+        "displayName": "Readout",
+        "purpose": "Call numbers, timecodes, phase clocks."
+      },
+      "stamp-label": {
+        "displayName": "Stamp label",
+        "purpose": "Stamp text only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 1px 0 #d5dad8, 0 0 0 1px #e3e7e5, 0 12px 28px rgba(47, 59, 69, 0.1)",
+        "purpose": "A document lifted onto the desk."
+      },
+      {
+        "name": "island",
+        "value": "0 1px 0 #d5dad8, 0 0 0 1px #e3e7e5, 0 8px 18px rgba(47, 59, 69, 0.1)",
+        "purpose": "Whiteboard toolbar islands."
+      }
+    ],
+    "motion": [
+      {
+        "name": "stamp-press",
+        "value": "120ms ease-out, scale 1.04 to 1, no bounce",
+        "purpose": "Stamp lands on mount and on text change."
+      },
+      {
+        "name": "slip-in",
+        "value": "180ms ease-out, translateX(-32px) to 0 with fade",
+        "purpose": "Slip marker slides in from the margin."
+      },
+      {
+        "name": "tick-dots",
+        "value": "1.2s steps(1,end) infinite",
+        "purpose": "Cataloguing loading line."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all animation and transition off",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action per view.",
+      "html": "<button class=\"ds-btn-primary\">I'm finished answering</button>",
+      "css": ".ds-btn-primary{font:600 15px 'Public Sans',system-ui,sans-serif;min-height:48px;padding:0 22px;border-radius:6px;cursor:pointer;transition:background-color .15s,border-color .15s;background:var(--color-ink,#1e262d);color:#fff;border:1px solid var(--color-ink,#1e262d)} .ds-btn-primary:hover{background:#3f4a53;border-color:#3f4a53} .ds-btn-primary:focus-visible{outline:2px solid #5a4aa8;outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting actions; danger uses an ink-2 border, not red.",
+      "html": "<button class=\"ds-btn-secondary\">Request a human interviewer</button>",
+      "css": ".ds-btn-secondary{font:600 15px 'Public Sans',system-ui,sans-serif;min-height:48px;padding:0 22px;border-radius:6px;cursor:pointer;transition:background-color .15s,border-color .15s;font-weight:400;background:#fff;color:#1e262d;border:1px solid #a9b6bd} .ds-btn-secondary:hover{background:#f4f5f2;border-color:#3f4a53} .ds-btn-secondary:focus-visible{outline:2px solid #5a4aa8;outline-offset:2px}"
+    },
+    {
+      "name": "Catalog Card",
+      "kind": "card",
+      "refersTo": "catalog-card",
+      "description": "White card with a 3px red top rule and a mono call-number row; the question card ruled only on its header and source rows, question text 12px clear of each rule.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-head\"><span>Q2.3</span><span class=\"ds-card-src\">CV p.1</span></div><p class=\"ds-card-q\">Walk me through the migration you led at your last role.</p></article>",
+      "css": ".ds-card{background:#fff;border:1px solid #d5dad8;border-top:3px solid #c23b2e;padding:14px 24px 18px;display:flex;flex-direction:column;gap:8px;max-width:520px;font-family:'Public Sans',system-ui,sans-serif;color:#1e262d} .ds-card-head{display:flex;justify-content:space-between;font:13px 'Courier Prime',ui-monospace,monospace;letter-spacing:.06em;color:#5c6770} .ds-card-src{color:#5a4aa8} .ds-card-q{margin:0;font-size:20px;line-height:24px;font-weight:500;max-width:62ch}"
+    },
+    {
+      "name": "AI Stamp",
+      "kind": "chip",
+      "refersTo": "stamp-ai",
+      "description": "Violet rubber-stamp label; presses on mount.",
+      "html": "<span class=\"ds-stamp\">AI interviewer</span>",
+      "css": ".ds-stamp{display:inline-flex;border:1.5px solid #5a4aa8;color:#5a4aa8;border-radius:3px;padding:2px 8px;font:700 11px 'Public Sans',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;transform:rotate(-1.5deg);animation:ds-press 120ms ease-out both} @keyframes ds-press{from{transform:scale(1.04) rotate(-1.5deg)}to{transform:scale(1) rotate(-1.5deg)}} @media (prefers-reduced-motion:reduce){.ds-stamp{animation:none}}"
+    },
+    {
+      "name": "Slip Marker",
+      "kind": "custom",
+      "refersTo": "slip-marker",
+      "description": "Call tag in the margin; the same tag, from the one questionLabel helper, cites the evidence in the report.",
+      "html": "<span class=\"ds-slip\">Q2.3<svg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" aria-hidden=\"true\"><path d=\"M1 5h7M5 2l3 3-3 3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg></span> <mark class=\"ds-wash\">Led the payments migration</mark>",
+      "css": ".ds-slip{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px 0 8px;border-radius:3px 0 0 3px;background:#5a4aa8;color:#fff;font:12px 'Courier Prime',ui-monospace,monospace} .ds-wash{background:rgba(90,74,168,.13);box-shadow:inset 0 -2px 0 #5a4aa8;color:#1e262d;padding:0 2px}"
+    },
+    {
+      "name": "Folder Tabs",
+      "kind": "nav",
+      "refersTo": "folder-tab",
+      "description": "Hard-swap tabs; the selected tab merges into the white document.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button role=\"tab\" aria-selected=\"true\" class=\"ds-tab ds-tab-on\">CV</button><button role=\"tab\" aria-selected=\"false\" class=\"ds-tab\">Whiteboard</button><button role=\"tab\" aria-selected=\"false\" class=\"ds-tab\">Pad</button></div>",
+      "css": ".ds-tabs{display:flex;gap:4px;padding-left:12px} .ds-tab{min-height:44px;padding:0 16px;font:14px 'Public Sans',system-ui,sans-serif;color:#3f4a53;background:#e9ecea;border:1px solid #d5dad8;border-radius:6px 6px 0 0;cursor:pointer} .ds-tab:hover{background:#fff} .ds-tab-on{background:#fff;color:#1e262d;font-weight:600;border-bottom-color:#fff;position:relative;top:1px} .ds-tab:focus-visible{outline:2px solid #5a4aa8;outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "44px field with the label above and an inline error line.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-i\">GitHub handle</label><input id=\"ds-i\" placeholder=\"octocat\"></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6px;max-width:320px;font-family:'Public Sans',system-ui,sans-serif} .ds-field label{font-size:14px;font-weight:600;color:#1e262d} .ds-field input{min-height:44px;padding:0 12px;font-size:15px;color:#1e262d;background:#fff;border:1px solid #a9b6bd;border-radius:6px} .ds-field input::placeholder{color:#5c6770} .ds-field input:focus-visible{outline:2px solid #5a4aa8;outline-offset:2px}"
+    },
+    {
+      "name": "Suggested Rating",
+      "kind": "custom",
+      "refersTo": "slip-marker",
+      "description": "Four boxes; the suggestion is violet and box 4 is dashed (human-only).",
+      "html": "<span class=\"ds-rate\"><i>1</i><i>2</i><i class=\"on\">3</i><i class=\"four\">4</i></span>",
+      "css": ".ds-rate{display:inline-flex;gap:4px} .ds-rate i{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;font:14px 'Courier Prime',ui-monospace,monospace;font-style:normal;color:#5c6770;border:1px solid #a9b6bd} .ds-rate .four{border-style:dashed} .ds-rate .on{background:#5a4aa8;border-color:#5a4aa8;color:#fff;font-weight:700}"
+    },
+    {
+      "name": "Hollinger Header",
+      "kind": "nav",
+      "refersTo": "app-header",
+      "description": "Blue-grey bar with wordmark, nav and mono title.",
+      "html": "<header class=\"ds-hdr\"><b>APERTURE</b><a class=\"cur\">Roles</a><a>Interviews</a><span>R-014</span></header>",
+      "css": ".ds-hdr{display:flex;align-items:center;gap:24px;min-height:56px;padding:0 28px;background:#2f3b45;color:#fff;font:14px 'Public Sans',system-ui,sans-serif} .ds-hdr b{letter-spacing:.14em} .ds-hdr a{color:#c9d2d7;display:inline-flex;align-items:center;min-height:56px} .ds-hdr a.cur{color:#fff;font-weight:600;box-shadow:inset 0 -2px 0 #fff} .ds-hdr span{font-family:'Courier Prime',ui-monospace,monospace;color:#a9b6bd}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Reading Room",
+    "overview": "Aperture treats a candidate's background the way an archive treats a record. The surface is a cool, acid-free board (#f4f5f2, never cream) under a Hollinger blue-grey chrome bar; documents are white catalog cards with a red top rule; everything the AI marks is stamped in violet ink. The materials are the archive's own: stamps, slip markers, folder tabs, finding-aid outlines, typewriter readouts. The product refuses the AI-dashboard default (no glowing orb, no gradients, no score rings) and reads as a calm, precise place where a person can check the work.\n\nDensity is document-first. Exactly one document owns the desk at a time (a CV, a report, a ledger); folder tabs swap it hard, never tile it. Dense surfaces (transcript, ledger, evidence) keep one text size and get rank from weight, case, reversal and rule. The 24px card rule is the layout armature: ruled cards put every text row on a 24px baseline, and spacing moves in 12/24 steps.\n\nColor is spent by meaning. Violet means the AI marked this. Red means a recording, and also the top rule of every catalog card. Ink buttons carry the one primary action per view. Nothing else is chromatic.",
+    "keyCharacteristics": [
+      "Cool board, white cards, blue-grey chrome; one violet voice, one red voice.",
+      "Public Sans for reading, Courier Prime for call numbers, timecodes and readouts.",
+      "Flat surfaces with 1px rules; depth by tonal layering and a single sheet shadow.",
+      "Every record carries a call number (R-014, C-0388, Q2.3, T-118) in mono.",
+      "Only readouts and stamp presses move; everything else is still."
+    ],
+    "rules": [
+      {
+        "name": "The Two Inks Rule",
+        "body": "Violet is what the AI marked; red is a recording or a card's top rule. A human action, a status, or decoration never borrows either.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cool Board Rule",
+        "body": "Backgrounds are blue-grey neutrals. Warm or cream grounds are out of the world.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Size Rule",
+        "body": "Dense surfaces use 14px throughout. Rank comes from weight, case, reversal (a white-on-ink current line) and rule, never from stepping size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Typewriter Rule",
+        "body": "Anything indexed, timed or counted is mono and tabular. Prose is never mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Label Rule",
+        "body": "A question has one call tag (Q2.3) from questionLabel; no surface composes its own.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Cards sit on the board with a rule, not a shadow. The sheet shadow belongs only to a document lifted onto the desk.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** use violet only for what the AI marked and red only for a recording or a catalog card's top rule.",
+      "**Do** put a mono call number on every record, quote and rating.",
+      "**Do** keep dense surfaces at 14px and rank by weight, case, reversal and rule.",
+      "**Do** align ruled cards to the 24px rule and space in 12/24 steps.",
+      "**Do** keep targets at 44px minimum (48px in the room) and a visible 2px violet focus ring (white on the header).",
+      "**Do** keep one primary ink button per view and confirm risky actions inline."
+    ],
+    "donts": [
+      "**Don't** add gradients, glows, orbs, score rings or avatars; the AI is a stamp, not a persona.",
+      "**Don't** use warm or cream grounds, or hard offset shadows.",
+      "**Don't** make danger red; danger is an ink-2 border and weight.",
+      "**Don't** tile documents; one owns the desk and tabs hard-swap.",
+      "**Don't** animate anything except stamp presses, slip entry and readouts, and never past reduced-motion.",
+      "**Don't** treat the mono small-caps section labels (kicker line over a card, \"FINDING AID\", SERIES headings) as a pattern for new surfaces; see the note below."
+    ]
+  }
+}

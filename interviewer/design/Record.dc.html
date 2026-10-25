@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aperture — review your record</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F2;color:#1E262D;font-family:'Public Sans',system-ui,sans-serif}
+a{color:#5A4AA8}a:hover{color:#43358A}
+.mono{font-family:'Courier Prime',ui-monospace,monospace}
+.ruled{background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 23px,#E3E7E5 23px,#E3E7E5 24px)}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="min-height: 1040px; display: flex; flex-direction: column;">
+  <header style="background: #2F3B45; color: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 0 28px; min-height: 56px;">
+    <span style="font-weight: 700; letter-spacing: 0.14em; font-size: 14px;">APERTURE <span class="mono" style="font-weight: 400; letter-spacing: 0; color: #A9B6BD;">for Northwind</span></span>
+    <ol aria-label="Steps" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px;">
+      <li style="color: #A9B6BD;">1 · Your documents ✓</li>
+      <li style="color: #FFFFFF; font-weight: 600; box-shadow: inset 0 -2px 0 #FFFFFF; padding-bottom: 2px;">2 · Review your record</li>
+      <li style="color: #A9B6BD;">3 · Interview</li>
+    </ol>
+  </header>
+
+  <div style="width: 100%; max-width: 1180px; margin: 0 auto; padding: 36px 28px 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start;">
+    <main style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex; flex-direction: column; gap: 10px; max-width: 64ch;">
+        <span class="mono" style="font-size: 13px; letter-spacing: 0.08em; color: #5C6770;">RECORD C-2026.0388 · SENIOR BACKEND ENGINEER</span>
+        <h1 style="margin: 0; font-size: 30px; line-height: 38px; font-weight: 700;">This is everything the interviewer will ask about.</h1>
+        <p style="margin: 0; font-size: 16px; line-height: 25px; color: #3F4A53;">Aperture read only the documents and links you gave us. Each item shows where it came from. Remove or correct anything that's wrong; nothing here is a score.</p>
+      </div>
+
+      <section aria-label="Catalogued items" style="display: flex; flex-direction: column; gap: 14px;">
+        <article class="ruled" style="background-color: #FFFFFF; border: 1px solid #D5DAD8; border-top: 3px solid #C23B2E; padding: 12px 20px 14px; display: flex; flex-direction: column; gap: 8px;">
+          <div class="mono" style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.08em; color: #5C6770;"><span>C-01 · EXPERIENCE</span><span>FROM YOUR CV · P.1 L.14</span></div>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 500;">Led the migration of Ledgerline's billing service to event sourcing (2022–2024).</p>
+          <p class="mono" style="margin: 0; font-size: 13px; line-height: 20px; color: #3F4A53;">"Led the migration of the billing service to event sourcing; reconciliation errors fell 38%."</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Correct</button>
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Remove</button>
+          </div>
+        </article>
+
+        <article class="ruled" style="background-color: #FFFFFF; border: 1px solid #D5DAD8; border-top: 3px solid #C23B2E; padding: 12px 20px 14px; display: flex; flex-direction: column; gap: 8px;">
+          <div class="mono" style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.08em; color: #5C6770;"><span>C-02 · LEADERSHIP</span><span>FROM YOUR CV · P.1 L.13</span></div>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 500;">Owned the payments on-call rotation for six engineers.</p>
+          <p class="mono" style="margin: 0; font-size: 13px; line-height: 20px; color: #3F4A53;">"Owned the payments on-call rotation for a team of six engineers."</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Correct</button>
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Remove</button>
+          </div>
+        </article>
+
+        <article class="ruled" style="background-color: #FFFFFF; border: 1px solid #D5DAD8; border-top: 3px solid #C23B2E; padding: 12px 20px 14px; display: flex; flex-direction: column; gap: 8px;">
+          <div class="mono" style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.08em; color: #5C6770;"><span>C-03 · OPEN SOURCE</span><span>FROM GITHUB · @MOKAFOR</span></div>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 500;">Maintains <a href="#">ledger</a>, a double-entry accounting library in Rust.</p>
+          <p class="mono" style="margin: 0; font-size: 13px; line-height: 20px; color: #3F4A53;">Rust · 214 stars · last pushed 12 Oct 2026</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Correct</button>
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Remove</button>
+          </div>
+        </article>
+
+        <article style="background: #FFFFFF; border: 1px dashed #A9B6BD; padding: 12px 20px 14px; display: flex; flex-direction: column; gap: 6px; opacity: 0.85;">
+          <div class="mono" style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.08em; color: #5C6770;"><span>C-04 · REMOVED BY YOU</span><span>FROM MOKAFOR.DEV</span></div>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; text-decoration: line-through; color: #5C6770;">Speaker at a 2023 payments meetup.</p>
+          <button type="button" style="align-self: flex-start; height: 40px; padding: 0 14px; border-radius: 6px; border: 1px solid #A9B6BD; background: #FFFFFF; color: #1E262D; font-size: 14px; cursor: pointer;">Restore</button>
+        </article>
+      </section>
+    </main>
+
+    <aside style="flex: 1 1 300px; max-width: 360px; display: flex; flex-direction: column; gap: 18px;">
+      <section aria-label="Sources" style="background: #FFFFFF; border: 1px solid #D5DAD8; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 21px;">
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: #5C6770;">WHAT WE READ</span>
+        <span>CV · maya-okafor.pdf</span>
+        <span>GitHub · @mokafor (public repositories)</span>
+        <span>mokafor.dev</span>
+        <span style="color: #5C6770;">LinkedIn export · not provided</span>
+        <span style="font-size: 13px; color: #3F4A53; border-top: 1px solid #E3E7E5; padding-top: 10px;">We did not search the web for you beyond these links.</span>
+      </section>
+
+      <section aria-label="What happens next" style="background: #FFFFFF; border: 1px solid #D5DAD8; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 21px;">
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.12em; color: #5C6770;">THE INTERVIEW</span>
+        <span>About 40 minutes with Aperture, an AI interviewer. It is recorded, captioned, and reviewed by a person at Northwind, who makes the decision.</span>
+        <span>You can say "I'm finished" or press a button when you're done answering, and ask for extra think time.</span>
+      </section>
+
+      <a href="Main.dc.html" style="display: flex; align-items: center; justify-content: center; height: 52px; border-radius: 6px; background: #1E262D; color: #FFFFFF; font-size: 16px; font-weight: 600; text-decoration: none;">Looks right — continue to interview</a>
+      <a href="#" style="font-size: 14px; text-align: center;">I'd prefer a human interviewer</a>
+      <p class="mono" style="margin: 0; font-size: 11px; color: #8A959C; text-align: center;">Synthetic demo record</p>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1040}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
